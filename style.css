@@ -1,0 +1,321 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0A0A0F;
+    color: #E5E7EB;
+    overflow-x: hidden;
+}
+
+/* Texto con degradado (estilo Framer) */
+.gradient-text {
+    background: linear-gradient(135deg, #8B5CF6, #34D399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Eyebrow / etiqueta pequeña encima de los títulos */
+.eyebrow {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8B5CF6;
+    margin-bottom: 12px;
+}
+
+/* Navbar estilo Linear: minimal, fija arriba */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FAFAFA;
+}
+
+.nav-cta {
+    color: #E5E7EB;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-cta:hover {
+    background-color: #FAFAFA;
+    color: #0A0A0F;
+    border-color: #FAFAFA;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Halo de luz difuso detrás del texto (estilo Framer) */
+.glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(67, 56, 202, 0.08) 45%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.badge {
+    position: relative;
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 20px;
+    background: rgba(139, 92, 246, 0.1);
+    color: #C4B5FD;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    position: relative;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 5rem;
+    line-height: 1.05;
+    font-weight: 700;
+    color: #FAFAFA;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hero .subtitulo {
+    position: relative;
+    font-size: 1.2rem;
+    color: #9CA3AF;
+    max-width: 520px;
+    margin-bottom: 40px;
+}
+
+/* Botón CTA compartido */
+.cta-btn {
+    position: relative;
+    background-color: #34D399;
+    color: #0A0A0F;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(52, 211, 153, 0.4);
+}
+
+/* Sección Servicios */
+.servicios {
+    padding: 140px 48px;
+    text-align: center;
+    background-color: #0A0A0F;
+}
+
+.servicios h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FAFAFA;
+    margin-bottom: 64px;
+    letter-spacing: -0.02em;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    position: relative;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 28px;
+    border-radius: 16px;
+    text-align: left;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.servicio-card:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    transform: translateY(-6px);
+}
+
+.card-num {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: #6B7280;
+    margin-bottom: 20px;
+}
+
+.servicio-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #FAFAFA;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.servicio-card p {
+    color: #9CA3AF;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Sección Beneficios */
+.beneficios {
+    padding: 140px 48px;
+    text-align: center;
+    background-color: #111117;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.beneficios h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FAFAFA;
+    margin-bottom: 64px;
+    letter-spacing: -0.02em;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.beneficio-item .numero {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #34D399, #8B5CF6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+}
+
+.beneficio-item p {
+    color: #9CA3AF;
+    font-size: 0.95rem;
+}
+
+/* CTA Final — tipografía masiva estilo Locomotive */
+.cta-final {
+    padding: 160px 48px;
+    text-align: center;
+    background-color: #0A0A0F;
+}
+
+.cta-final h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FAFAFA;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.cta-final p {
+    font-size: 1.1rem;
+    color: #9CA3AF;
+    margin-bottom: 36px;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 48px 40px;
+    text-align: center;
+    background-color: #0A0A0F;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer .logo {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.footer p {
+    color: #6B7280;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #34D399;
+}
+
+/* Responsive simple para mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .servicios-grid,
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta-final h2 {
+        font-size: 2.2rem;
+    }
+}
