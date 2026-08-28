@@ -137,6 +137,109 @@ h3,
     color: white;
 }
 
+.navigation a[aria-current="page"] {
+    color: #111;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 36px;
+    height: 36px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    position: relative;
+    z-index: 220;
+}
+
+.burger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--black);
+    transition: transform .25s ease, opacity .2s ease;
+}
+
+.burger-btn.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ==================================================
+   PAGE HERO (subpages: proyectos / servicios / contacto)
+================================================== */
+
+.page-hero {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 165px 42px 70px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero h1 {
+    max-width: 780px;
+
+    margin-top: 22px;
+
+    font-size: clamp(42px, 5.2vw, 68px);
+
+    line-height: 1.03;
+
+    letter-spacing: -3px;
+
+    font-weight: 600;
+}
+
+.page-hero h1 span {
+    color: var(--violet);
+}
+
+.page-hero p {
+    max-width: 560px;
+
+    margin-top: 22px;
+
+    font-size: 17px;
+    line-height: 1.65;
+
+    color: #555;
+}
+
+@media (max-width: 900px) {
+
+    .page-hero {
+        padding: 115px 25px 45px;
+    }
+
+}
+
 
 /* ==================================================
    HERO
@@ -1081,10 +1184,40 @@ h3,
 
     .header {
         padding: 22px 25px;
+        position: relative;
+    }
+
+    .burger-btn {
+        display: flex;
     }
 
     .navigation {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        max-height: 0;
+        overflow: hidden;
+
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+
+        transition: max-height .3s ease;
+    }
+
+    .navigation.open {
+        max-height: 300px;
+    }
+
+    .navigation a {
+        padding: 17px 25px;
+        font-size: 15px;
+        border-top: 1px solid var(--border);
     }
 
     .hero {
