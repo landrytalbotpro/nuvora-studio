@@ -357,6 +357,29 @@ h3,
     background: white;
 }
 
+.hero-note {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    color: #666;
+}
+
+.hero-note-dot {
+    width: 6px;
+    height: 6px;
+
+    background: var(--green);
+
+    border-radius: 50%;
+}
+
 
 /* ==================================================
    HERO VISUAL
@@ -984,6 +1007,77 @@ h3,
 
 
 /* ==================================================
+   FAQ
+================================================== */
+
+.faq {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 120px 42px 150px;
+
+    border-top: 1px solid var(--border);
+}
+
+.faq-header {
+    margin-bottom: 70px;
+}
+
+.faq-header h2 {
+    max-width: 800px;
+
+    font-size: clamp(46px,5.5vw,80px);
+
+    line-height: .98;
+
+    letter-spacing: -4px;
+
+    font-weight: 500;
+}
+
+.faq-header h2 span {
+    color: var(--violet);
+}
+
+.faq-list {
+    border-top: 1px solid var(--border);
+}
+
+.faq-item {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1fr) minmax(0,1fr);
+
+    gap: 30px;
+
+    padding: 36px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item h3 {
+    max-width: 380px;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+.faq-item p {
+    max-width: 480px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* ==================================================
    CONTACT
 ================================================== */
 
@@ -1258,6 +1352,19 @@ h3,
         padding: 100px 25px;
     }
 
+    .faq {
+        padding: 100px 25px 120px;
+    }
+
+    .faq-header {
+        margin-bottom: 45px;
+    }
+
+    .faq-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
     .contact {
         padding: 110px 25px;
     }
@@ -1370,7 +1477,8 @@ h3,
     .statement h2,
     .section-heading h2,
     .services-heading h2,
-    .process-header h2 {
+    .process-header h2,
+    .faq-header h2 {
         letter-spacing: -3px;
     }
 
