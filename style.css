@@ -563,6 +563,69 @@ h3,
 
 
 /* ==================================================
+   MARQUEE
+================================================== */
+
+.marquee {
+    overflow: hidden;
+
+    background: var(--black);
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+
+    padding: 0 20px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    color: var(--white);
+}
+
+.marquee-track span::after {
+    content: "✦";
+
+    color: var(--violet);
+
+    font-size: 12px;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .marquee-track {
+        animation: none;
+    }
+
+}
+
+
+/* ==================================================
    STATEMENT
 ================================================== */
 
@@ -660,7 +723,8 @@ h3,
 
 .section-heading h2,
 .services-heading h2,
-.process-header h2 {
+.process-header h2,
+.pricing-heading h2 {
     max-width: 800px;
 
     font-size: clamp(46px,5.5vw,80px);
@@ -674,7 +738,8 @@ h3,
 
 .section-heading h2 span,
 .services-heading h2 span,
-.process-header h2 span {
+.process-header h2 span,
+.pricing-heading h2 span {
     color: var(--violet);
 }
 
@@ -1007,6 +1072,249 @@ h3,
 
 
 /* ==================================================
+   PRICING
+================================================== */
+
+.pricing {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 140px 42px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.pricing-heading {
+    max-width: 700px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+}
+
+.pricing-heading .section-label {
+    justify-content: center;
+}
+
+.pricing-heading .section-intro {
+    max-width: 480px;
+
+    margin: 18px auto 0;
+}
+
+.pricing-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    padding: 42px 32px;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    background: #fff;
+}
+
+.pricing-card.featured {
+    background: var(--black);
+    border-color: var(--black);
+
+    color: #fff;
+}
+
+.pricing-card-badge {
+    display: inline-flex;
+    align-self: flex-start;
+
+    padding: 6px 14px;
+
+    border-radius: 100px;
+
+    background: var(--violet);
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.pricing-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #999;
+}
+
+.pricing-card.featured .pricing-card-name {
+    color: #aaa;
+}
+
+.pricing-card-price {
+    display: flex;
+    align-items: baseline;
+
+    gap: 8px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.pricing-card-price span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #999;
+}
+
+.pricing-card.featured .pricing-card-price span {
+    color: #aaa;
+}
+
+.pricing-card-tagline {
+    margin-top: -12px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #777;
+}
+
+.pricing-card.featured .pricing-card-tagline {
+    color: #bbb;
+}
+
+.pricing-card ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+
+    list-style: none;
+}
+
+.pricing-card li {
+    position: relative;
+
+    padding-left: 24px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #555;
+}
+
+.pricing-card.featured li {
+    color: #ddd;
+}
+
+.pricing-card li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--violet);
+    font-weight: 600;
+}
+
+.pricing-card.featured li::before {
+    color: var(--green);
+}
+
+.pricing-card-delivery {
+    font-size: 12px;
+
+    color: #999;
+}
+
+.pricing-card.featured .pricing-card-delivery {
+    color: #999;
+}
+
+.pricing-card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: auto;
+    padding-top: 18px;
+
+    gap: 8px;
+
+    border-radius: 100px;
+
+    padding: 15px 24px;
+
+    background: var(--black);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #fff;
+
+    transition: opacity .2s ease;
+}
+
+.pricing-card.featured .pricing-card-cta {
+    background: var(--violet);
+}
+
+.pricing-card-cta:hover {
+    opacity: .8;
+}
+
+.pricing-note {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    margin-top: 56px;
+    padding-top: 40px;
+
+    border-top: 1px solid var(--border);
+}
+
+.pricing-note-item strong {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.pricing-note-item p {
+    max-width: 320px;
+
+    margin-top: 6px;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #777;
+}
+
+
+/* ==================================================
    FAQ
 ================================================== */
 
@@ -1267,6 +1575,17 @@ h3,
         row-gap: 55px;
     }
 
+    .pricing-grid {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        row-gap: 28px;
+    }
+
+    .pricing-card.featured {
+        grid-column: span 2;
+    }
+
 }
 
 
@@ -1350,6 +1669,22 @@ h3,
 
     .process {
         padding: 100px 25px;
+    }
+
+    .pricing {
+        padding: 100px 25px;
+    }
+
+    .pricing-heading {
+        margin-bottom: 50px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        grid-column: span 1;
     }
 
     .faq {
