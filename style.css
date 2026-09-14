@@ -2033,6 +2033,10 @@ h3,
         border-top: 0;
     }
 
+    .process-item h3 {
+        margin-top: 28px;
+    }
+
     .why {
         padding: 75px 18px 90px;
     }
@@ -2049,10 +2053,6 @@ h3,
 
     .why-item p {
         max-width: none;
-    }
-
-    .process-item h3 {
-        margin-top: 28px;
     }
 
     .pricing {
