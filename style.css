@@ -1716,6 +1716,12 @@ h3,
         row-gap: 55px;
     }
 
+    .process-item:nth-child(3) {
+        padding-left: 0;
+
+        border-left: 0;
+    }
+
     .why-grid {
         grid-template-columns:
             repeat(2,minmax(0,1fr));
@@ -2033,10 +2039,6 @@ h3,
         border-top: 0;
     }
 
-    .process-item h3 {
-        margin-top: 28px;
-    }
-
     .why {
         padding: 75px 18px 90px;
     }
@@ -2053,6 +2055,10 @@ h3,
 
     .why-item p {
         max-width: none;
+    }
+
+    .process-item h3 {
+        margin-top: 28px;
     }
 
     .pricing {
