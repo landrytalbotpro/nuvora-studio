@@ -15,6 +15,17 @@
         name="description"
         content="Diseño web, desarrollo, SEO y mantenimiento. Qué incluye cada servicio, para qué negocio es, y por qué trabajar con Nuvora Studio."
     >
+  <link rel="canonical" href="https://nuvorastudio.es/servicios.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Servicios — Nuvora Studio">
+  <meta property="og:description" content="Creación de sitios web, branding, contenido digital e integración de IA para pequeños negocios en España y Francia.">
+  <meta property="og:url" content="https://nuvorastudio.es/servicios.html">
+  <meta property="og:image" content="https://nuvorastudio.es/favicon-512.png">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Servicios — Nuvora Studio">
+  <meta name="twitter:description" content="Creación de sitios web, branding, contenido digital e integración de IA para pequeños negocios en España y Francia.">
+  <meta name="twitter:image" content="https://nuvorastudio.es/favicon-512.png">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -575,5 +586,25 @@
 })();
 </script>
 
+
+  <!-- Sticky mobile CTA (ajouté — checklist Nuvora) -->
+  <style>
+  #nuvora-sticky-cta-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+    display: none; justify-content: center; align-items: center;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    background: rgba(20,20,20,0.96); backdrop-filter: blur(6px);
+  }
+  #nuvora-sticky-cta-bar a {
+    display: block; width: 100%; max-width: 480px; text-align: center;
+    background: #25D366; color: #fff; font-weight: 700; font-size: 15px;
+    padding: 13px 20px; border-radius: 999px; text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  @media (max-width: 780px) { #nuvora-sticky-cta-bar { display: flex; } }
+  </style>
+  <div id="nuvora-sticky-cta-bar">
+    <a href="https://wa.me/34675153535" target="_blank" rel="noopener">💬 Escríbenos — Respuesta en 24h</a>
+  </div>
 </body>
 </html>
