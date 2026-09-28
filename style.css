@@ -2102,3 +2102,64 @@ h3,
     }
 
 }
+
+/* ==================================================
+   LANGUAGE SWITCH (ES / FR)
+================================================== */
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.lang-switch a {
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: #777;
+    line-height: 1;
+    transition: color .2s ease, background .2s ease;
+}
+
+.lang-switch a:hover {
+    color: #111;
+}
+
+.lang-switch a.is-active {
+    background: #111;
+    color: var(--white);
+}
+
+.lang-inline {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    opacity: .7;
+}
+
+.lang-inline a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 550px) {
+    .header-actions {
+        gap: 10px;
+    }
+    .lang-switch a {
+        padding: 6px 8px;
+    }
+}
+
+/* En móvil pequeño, el CTA fijo de WhatsApp sustituye al botón del header */
+@media (max-width: 440px) {
+    .header-button {
+        display: none;
+    }
+}

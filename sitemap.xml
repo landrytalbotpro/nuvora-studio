@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nuvorastudio.es/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/proyectos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/projets.html"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/fr/projets.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/projets.html"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/services.html"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/fr/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/services.html"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/contact.html"/>
+  </url>
+</urlset>
