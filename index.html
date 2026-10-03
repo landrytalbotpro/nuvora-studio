@@ -158,6 +158,49 @@
         .showcase-media { border-radius: 16px; }
     }
 
+    /* ---------- HERO: proyecto real en el navegador ---------- */
+    .hero-visual { min-height: 0; padding-bottom: 34px; }
+    .hero-browser {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: block;
+        height: auto;
+        margin: 45px 0 0 auto;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 30px 60px rgba(17,17,17,.14), 0 0 0 1px rgba(17,17,17,.06);
+        transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .hero-browser:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 38px 70px rgba(17,17,17,.18), 0 0 0 1px rgba(17,17,17,.06);
+    }
+    .browser-dots span:nth-child(1) { background: #ff5f57; }
+    .browser-dots span:nth-child(2) { background: #febc2e; }
+    .browser-dots span:nth-child(3) { background: #28c840; }
+    .hero-shot {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1200 / 676;
+        object-fit: cover;
+        object-position: top center;
+    }
+    .floating-card {
+        bottom: 0;
+        left: 0;
+        border-radius: 14px;
+        box-shadow: 0 14px 30px rgba(17,17,17,.12);
+        transition: transform .3s ease;
+    }
+    .floating-card:hover { transform: translateY(-3px); }
+    .floating-card strong { font-size: 22px; }
+    @media (max-width: 550px) {
+        .hero-browser { height: auto; box-shadow: 0 20px 40px rgba(17,17,17,.14), 0 0 0 1px rgba(17,17,17,.06); }
+        .floating-card { padding: 14px 18px; }
+    }
+
     /* ---------- PRECIOS: esquinas redondeadas ---------- */
     .pricing-card {
         border-radius: 22px;
@@ -305,10 +348,16 @@
 
         <div class="visual-label">
             <span>01</span>
-            DIGITAL PRESENCE
+            PROYECTO DESTACADO
         </div>
 
-        <div class="hero-browser">
+        <a
+            href="https://landrytalbotpro.github.io/volteo/"
+            class="hero-browser"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver la web de VOLTÉO"
+        >
 
             <div class="browser-top">
 
@@ -319,48 +368,37 @@
                 </div>
 
                 <div class="browser-url">
-                    nuvora.studio
+                    landrytalbotpro.github.io/volteo
                 </div>
 
             </div>
 
-            <div class="hero-site">
+            <img
+                class="hero-shot"
+                src="images/volteo.jpg"
+                alt="Web de VOLTÉO diseñada por Nuvora Studio"
+                width="1200"
+                height="676"
+                fetchpriority="high"
+            >
 
-                <div class="hero-site-nav">
-                    <strong>NUVORA</strong>
-                    <span>WEB STUDIO</span>
-                </div>
-
-                <div class="hero-site-title">
-                    <span>YOUR</span>
-                    <span>BUSINESS</span>
-                    <span>ONLINE.</span>
-                </div>
-
-                <div class="hero-site-footer">
-                    <span>DESIGN / DEVELOPMENT</span>
-                    <span>2026 ↗</span>
-                </div>
-
-            </div>
-
-        </div>
+        </a>
 
 
-        <div class="floating-card">
+        <a
+            href="https://landrytalbotpro.github.io/volteo/"
+            class="floating-card"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
-            <strong>+∞</strong>
+            <strong>VOLTÉO</strong>
 
             <span>
-                Potencial digital
+                Coaching premium · Ver web ↗
             </span>
 
-        </div>
-
-
-        <div class="floating-number">
-            01 / 08
-        </div>
+        </a>
 
     </div>
 
