@@ -53,98 +53,86 @@
     gtag('js', new Date());
     gtag('config', 'G-V2VKRWEJ8G');
   </script>
-  <!-- Carrusel de proyectos (igual que la home) -->
+  <!-- Portfolio: fichas de proyecto -->
   <style>
-    /* ---------- CARRUSEL PROYECTOS (scroll horizontal) ---------- */
-    .projects .section-heading { margin-bottom: 10px; }
-
-    .showcase {
-        position: relative;
-        margin: 0 -42px;
+    .cases {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 64px 40px;
     }
-
-    .showcase-sticky {
-        height: 100vh;
-        height: 100svh;
-        display: flex;
-        align-items: center;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: none;
-    }
-    .showcase-sticky::-webkit-scrollbar { display: none; }
-
-    .showcase.is-pinned .showcase-sticky {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
-    }
-
-    .showcase-track {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 28px;
-        padding: 0 42px;
-        will-change: transform;
-    }
-
-    .showcase-card {
-        flex: 0 0 auto;
-        width: min(clamp(260px, 26vw, 380px), calc((100svh - 220px) * .8));
-    }
-
-    .showcase-media {
-        position: relative;
+    .case-media {
         display: block;
-        aspect-ratio: 4 / 5;
-        border-radius: 20px;
+        aspect-ratio: 16 / 10;
+        border-radius: 18px;
         overflow: hidden;
         background: #e6e5df;
+        box-shadow: 0 0 0 1px rgba(17,17,17,.06);
     }
-
-    .showcase-media img {
+    .case-media img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top center;
         transition: transform .6s ease;
     }
-
-    .showcase-media:hover img { transform: scale(1.03); }
-
-    .showcase-caption {
+    .case-media:hover img { transform: scale(1.03); }
+    .case-body { padding: 22px 4px 0; }
+    .case-top {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         gap: 12px;
-        padding: 16px 4px 0;
     }
-
-    .showcase-caption h3 {
-        font-size: 18px;
-        font-weight: 500;
+    .case-name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: .8px;
+        text-transform: uppercase;
     }
-
-    .showcase-caption p {
+    .case-sector {
         margin-top: 4px;
         font-size: 13px;
         color: #777;
     }
-
-    .showcase-caption .project-number { flex-shrink: 0; }
-
-    .projects .portfolio-note { margin-top: 30px; }
-    .projects .portfolio-note, .services .portfolio-note { border-top: none; }
-    .services-grid { border-bottom: none; }
-
-    @media (max-width: 900px) {
-        .showcase { margin: 0 -25px; }
-        .showcase-track { padding: 0 25px; gap: 18px; }
-        .showcase-card { width: min(72vw, 300px, calc((100svh - 200px) * .8)); }
-        .showcase-media { border-radius: 16px; }
+    .case-text {
+        max-width: 52ch;
+        margin-top: 14px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #444;
     }
-
+    .case-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+        list-style: none;
+    }
+    .case-tags li {
+        padding: 6px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        font-size: 12px;
+        color: #555;
+    }
+    .case-link {
+        display: inline-block;
+        margin-top: 18px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: var(--border);
+        transition: text-decoration-color .2s ease;
+    }
+    .case-link:hover { text-decoration-color: var(--violet); }
+    .projects .portfolio-note { margin-top: 70px; }
+    @media (max-width: 900px) {
+        .cases { grid-template-columns: 1fr; gap: 52px; }
+        .case-media { border-radius: 14px; }
+    }
   </style>
 </head>
 
@@ -240,119 +228,239 @@
 
 <section class="projects">
 
-    <div class="showcase" id="showcase">
+    <div class="cases">
 
-        <div class="showcase-sticky">
+        <article class="case">
 
-            <div class="showcase-track">
+            <a href="https://landrytalbotpro.github.io/volteo/" class="case-media">
+                <img src="images/volteo.jpg" alt="Web de VOLTÉO" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
 
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/volteo/" class="showcase-media">
-                    <img src="images/volteo.jpg" alt="Diseño web de VOLTÉO" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>VOLTÉO</h3>
-                        <p>Coaching premium · Dirección visual</p>
-                    </div>
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">VOLTÉO</h2>
                     <span class="project-number">01</span>
                 </div>
-            </article>
 
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/Sourire-paris/" class="showcase-media">
-                    <img src="images/sourire.jpg" alt="Diseño web de Sourire Paris" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Sourire Paris</h3>
-                        <p>Clínica dental · Experiencia web</p>
-                    </div>
-                    <span class="project-number">02</span>
-                </div>
-            </article>
+                <p class="case-sector">Coaching premium</p>
 
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/Elan-Studio/" class="showcase-media">
-                    <img src="images/elan.jpg" alt="Diseño web de Élan Studio" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Élan Studio</h3>
-                        <p>Beauty &amp; Wellness · Web Design</p>
-                    </div>
-                    <span class="project-number">03</span>
-                </div>
-            </article>
+                <p class="case-text">Un estudio de coaching que vende calma y exclusividad. Dirección visual sobria, mucho aire y una tipografía editorial para transmitir confianza desde el primer scroll.</p>
 
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/corte-co/" class="showcase-media">
-                    <img src="images/corte.jpg" alt="Diseño web de Corte and Co" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Corte &amp; Co.</h3>
-                        <p>Barbería · Branding digital</p>
-                    </div>
-                    <span class="project-number">04</span>
-                </div>
-            </article>
+                <ul class="case-tags">
+                    <li>Reserva de llamada</li>
+                    <li>Testimonios</li>
+                    <li>WhatsApp</li>
+                </ul>
 
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/corte-co-fr/" class="showcase-media">
-                    <img src="images/corte-fr.jpg" alt="Diseño web de Corte &amp; Co. (versión FR)" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Corte &amp; Co. FR</h3>
-                        <p>Barbershop Paris · Branding digital</p>
-                    </div>
-                    <span class="project-number">05</span>
-                </div>
-            </article>
-
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/braza-restaurante/" class="showcase-media">
-                    <img src="images/braza.jpg" alt="Diseño web de Braza Restaurante" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Braza</h3>
-                        <p>Restaurante · Web Design</p>
-                    </div>
-                    <span class="project-number">06</span>
-                </div>
-            </article>
-
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/forge-gym/" class="showcase-media">
-                    <img src="images/forge.jpg" alt="Diseño web de Forge Gym" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Forge</h3>
-                        <p>Fitness · Dirección visual</p>
-                    </div>
-                    <span class="project-number">07</span>
-                </div>
-            </article>
-
-            <article class="showcase-card">
-                <a href="https://landrytalbotpro.github.io/vantia-ia/" class="showcase-media">
-                    <img src="images/vantia.jpg" alt="Diseño web de Vantia IA" loading="lazy" decoding="async">
-                </a>
-                <div class="showcase-caption">
-                    <div>
-                        <h3>Vantia IA</h3>
-                        <p>IA · Real Estate · B2B</p>
-                    </div>
-                    <span class="project-number">08</span>
-                </div>
-            </article>
+                <a href="https://landrytalbotpro.github.io/volteo/" class="case-link">Ver la web ↗</a>
 
             </div>
 
-        </div>
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/Sourire-paris/" class="case-media">
+                <img src="images/sourire.jpg" alt="Web de Sourire Paris" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Sourire Paris</h2>
+                    <span class="project-number">02</span>
+                </div>
+
+                <p class="case-sector">Clínica dental · París 11e</p>
+
+                <p class="case-text">Pensada para el paciente que tiene miedo al dentista: colores suaves, mensajes que tranquilizan y el equipo en primer plano.</p>
+
+                <ul class="case-tags">
+                    <li>Cita online</li>
+                    <li>Equipo</li>
+                    <li>Opiniones</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/Sourire-paris/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/Elan-Studio/" class="case-media">
+                <img src="images/elan.jpg" alt="Web de Élan Studio" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Élan Studio</h2>
+                    <span class="project-number">03</span>
+                </div>
+
+                <p class="case-sector">Belleza y bienestar</p>
+
+                <p class="case-text">Un salón que quiere sentirse como un refugio: estética elegante, servicios con precios claros y un ritual propio como hilo conductor.</p>
+
+                <ul class="case-tags">
+                    <li>Servicios y precios</li>
+                    <li>Reserva</li>
+                    <li>Opiniones</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/Elan-Studio/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/corte-co/" class="case-media">
+                <img src="images/corte.jpg" alt="Web de Corte &amp; Co." width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Corte &amp; Co.</h2>
+                    <span class="project-number">04</span>
+                </div>
+
+                <p class="case-sector">Barbería · Gijón</p>
+
+                <p class="case-text">Una barbería de oficio: contraste fuerte, fotos del trabajo real y precios sin sorpresas para que el cliente reserve sin dudar.</p>
+
+                <ul class="case-tags">
+                    <li>Precios</li>
+                    <li>Galería</li>
+                    <li>Reserva</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/corte-co/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/corte-co-fr/" class="case-media">
+                <img src="images/corte-fr.jpg" alt="Web de Corte &amp; Co. FR" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Corte &amp; Co. FR</h2>
+                    <span class="project-number">05</span>
+                </div>
+
+                <p class="case-sector">Barbería · París 11e</p>
+
+                <p class="case-text">La misma marca adaptada al mercado francés: un tono más clásico y toda la información práctica antes de venir.</p>
+
+                <ul class="case-tags">
+                    <li>Versión en francés</li>
+                    <li>Acceso</li>
+                    <li>Reserva</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/corte-co-fr/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/braza-restaurante/" class="case-media">
+                <img src="images/braza.jpg" alt="Web de Braza" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Braza</h2>
+                    <span class="project-number">06</span>
+                </div>
+
+                <p class="case-sector">Restaurante a la brasa</p>
+
+                <p class="case-text">El fuego como protagonista: imágenes cálidas, los platos estrella bien presentados y la reserva siempre a mano.</p>
+
+                <ul class="case-tags">
+                    <li>Carta</li>
+                    <li>Horario y ubicación</li>
+                    <li>Reserva de mesa</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/braza-restaurante/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/forge-gym/" class="case-media">
+                <img src="images/forge.jpg" alt="Web de Forge" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Forge</h2>
+                    <span class="project-number">07</span>
+                </div>
+
+                <p class="case-sector">Gimnasio funcional</p>
+
+                <p class="case-text">Energía y claridad: los espacios, los planes con su precio y un mensaje directo para empezar hoy mismo.</p>
+
+                <ul class="case-tags">
+                    <li>Planes y precios</li>
+                    <li>Ubicación</li>
+                    <li>WhatsApp</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/forge-gym/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
+
+        <article class="case">
+
+            <a href="https://landrytalbotpro.github.io/vantia-ia/" class="case-media">
+                <img src="images/vantia.jpg" alt="Web de Vantia IA" width="1200" height="676" loading="lazy" decoding="async">
+            </a>
+
+            <div class="case-body">
+
+                <div class="case-top">
+                    <h2 class="case-name">Vantia IA</h2>
+                    <span class="project-number">08</span>
+                </div>
+
+                <p class="case-sector">IA para inmobiliarias · B2B</p>
+
+                <p class="case-text">Una web B2B que explica un servicio nuevo en tres pasos, de la foto real a la venta, con un único objetivo: pedir una demo.</p>
+
+                <ul class="case-tags">
+                    <li>Cómo funciona</li>
+                    <li>Testimonios</li>
+                    <li>Solicitar demo</li>
+                </ul>
+
+                <a href="https://landrytalbotpro.github.io/vantia-ia/" class="case-link">Ver la web ↗</a>
+
+            </div>
+
+        </article>
 
     </div>
 
@@ -368,47 +476,6 @@
         </p>
 
     </div>
-
-<script>
-(function () {
-    var sc = document.getElementById('showcase');
-    if (!sc) return;
-    var sticky = sc.querySelector('.showcase-sticky');
-    var track = sc.querySelector('.showcase-track');
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var dist = 0, ticking = false;
-
-    function update() {
-        ticking = false;
-        if (!sc.classList.contains('is-pinned')) return;
-        var total = sc.offsetHeight - sticky.offsetHeight;
-        var p = total > 0 ? Math.min(Math.max(-sc.getBoundingClientRect().top / total, 0), 1) : 0;
-        // De izquierda a derecha: arranca mostrando 01 y las siguientes entran por la izquierda
-        track.style.transform = 'translate3d(' + (-dist * (1 - p)) + 'px,0,0)';
-    }
-
-    function layout() {
-        if (reduce.matches) {
-            sc.classList.remove('is-pinned');
-            sc.style.height = '';
-            track.style.transform = '';
-            sticky.scrollLeft = sticky.scrollWidth;
-            return;
-        }
-        sc.classList.add('is-pinned');
-        dist = Math.max(track.scrollWidth - sticky.clientWidth, 0);
-        sc.style.height = (sticky.offsetHeight + dist) + 'px';
-        update();
-    }
-
-    window.addEventListener('scroll', function () {
-        if (!ticking) { ticking = true; requestAnimationFrame(update); }
-    }, { passive: true });
-    window.addEventListener('resize', layout);
-    window.addEventListener('load', layout);
-    layout();
-})();
-</script>
 
 </section>
 
