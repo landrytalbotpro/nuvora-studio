@@ -2294,3 +2294,65 @@ h3,
 .showcase .showcase-caption p {
     font-size: 13px;
 }
+
+/* ==================================================
+   ESPACIADO — menos espacio vacío entre secciones
+================================================== */
+
+.hero { padding-top: 72px; padding-bottom: 90px; }
+.statement { padding-top: 96px; padding-bottom: 96px; }
+.statement h2 { margin-bottom: 28px; }
+.projects { padding-top: 80px; padding-bottom: 96px; }
+.services { padding-top: 96px; padding-bottom: 96px; }
+.pricing { padding-top: 80px; padding-bottom: 96px; }
+.faq { padding-top: 80px; padding-bottom: 96px; }
+.contact { padding-top: 110px; padding-bottom: 110px; }
+.page-hero { padding-top: 120px; padding-bottom: 56px; }
+
+/* Carrusel: la tarjeta se fija centrada, sin pantalla vacía alrededor */
+.projects .showcase.is-pinned .showcase-sticky {
+    height: auto;
+    top: calc(50svh - 170px);
+    padding: 0;
+}
+
+/* Botones redondeados, como el resto de la web */
+.button { border-radius: 999px; }
+
+@media (max-width: 900px) {
+    .hero { padding-top: 56px; padding-bottom: 72px; }
+    .statement { padding-top: 72px; padding-bottom: 72px; }
+    .projects { padding-top: 64px; padding-bottom: 80px; }
+    .services { padding-top: 72px; padding-bottom: 72px; }
+    .pricing { padding-top: 64px; padding-bottom: 80px; }
+    .faq { padding-top: 64px; padding-bottom: 80px; }
+    .contact { padding-top: 80px; padding-bottom: 80px; }
+    .page-hero { padding-top: 100px; padding-bottom: 40px; }
+    .projects .showcase.is-pinned .showcase-sticky { top: calc(50svh - 140px); }
+}
+
+@media (max-width: 550px) {
+    .hero { padding-top: 40px; padding-bottom: 56px; }
+    .statement { padding-top: 56px; padding-bottom: 56px; }
+    .statement h2 { margin-bottom: 20px; }
+    .projects { padding-top: 48px; padding-bottom: 64px; }
+    .services { padding-top: 56px; padding-bottom: 56px; }
+    .pricing { padding-top: 48px; padding-bottom: 64px; }
+    .faq { padding-top: 48px; padding-bottom: 64px; }
+    .contact { padding-top: 64px; padding-bottom: 64px; }
+    .page-hero { padding-top: 88px; padding-bottom: 32px; }
+
+    /* Hero: botones compactos, uno al lado del otro */
+    .hero-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+    }
+    .hero-actions .button {
+        width: auto;
+        padding: 12px 18px;
+        gap: 12px;
+        font-size: 13px;
+    }
+}
