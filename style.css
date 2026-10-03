@@ -2163,3 +2163,18 @@ h3,
         display: none;
     }
 }
+
+/* Proyectos: esquinas redondeadas (como el carrusel de la home) */
+.project-image {
+    border-radius: 20px;
+}
+
+.project-overlay span {
+    border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+    .project-image {
+        border-radius: 16px;
+    }
+}
