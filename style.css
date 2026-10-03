@@ -2270,3 +2270,27 @@ h3,
     .showcase .showcase-card { width: min(80vw, 340px); }
     .showcase .showcase-media { border-radius: 14px; }
 }
+
+/* ==================================================
+   PROYECTOS — sin líneas + nombres con la misma tipografía
+================================================== */
+
+.project-info {
+    border-bottom: none;
+}
+
+.portfolio-note {
+    border-top: none;
+}
+
+.showcase .showcase-caption h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.showcase .showcase-caption p {
+    font-size: 13px;
+}
