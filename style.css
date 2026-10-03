@@ -2178,3 +2178,95 @@ h3,
         border-radius: 16px;
     }
 }
+
+/* ==================================================
+   AJUSTE TIPOGRAFÍA — títulos más contenidos y legibles
+================================================== */
+
+.hero h1 {
+    font-size: clamp(40px, 4.6vw, 64px);
+    line-height: .98;
+    letter-spacing: -2.5px;
+}
+
+.statement h2 {
+    font-size: clamp(32px, 3.6vw, 50px);
+    letter-spacing: -2px;
+}
+
+.section-heading h2,
+.services-heading h2,
+.process-header h2,
+.why-header h2,
+.faq-header h2,
+.pricing-heading h2 {
+    font-size: clamp(32px, 3.4vw, 48px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.page-hero h1 {
+    font-size: clamp(36px, 4vw, 56px);
+    letter-spacing: -2px;
+}
+
+.contact h2 {
+    font-size: clamp(36px, 4.2vw, 60px);
+    letter-spacing: -2.5px;
+}
+
+.pricing-card-price {
+    font-size: 38px;
+}
+
+@media (max-width: 550px) {
+    .hero h1 { font-size: 38px; letter-spacing: -1.5px; }
+    .statement h2,
+    .section-heading h2,
+    .services-heading h2,
+    .process-header h2,
+    .why-header h2,
+    .faq-header h2,
+    .pricing-heading h2 { font-size: 30px; letter-spacing: -1.2px; }
+    .page-hero h1 { font-size: 34px; letter-spacing: -1.5px; }
+    .contact h2 { font-size: 36px; letter-spacing: -1.5px; }
+    .pricing-card-price { font-size: 32px; }
+}
+
+/* ==================================================
+   CARRUSEL — todas las tarjetas iguales (formato web 16:10)
+================================================== */
+
+.showcase .showcase-track {
+    gap: 24px;
+}
+
+.showcase .showcase-card {
+    width: min(clamp(280px, 30vw, 420px), calc((100svh - 240px) * 1.6));
+}
+
+.showcase .showcase-media {
+    aspect-ratio: 16 / 10;
+    border-radius: 18px;
+}
+
+.showcase .showcase-caption > div {
+    min-width: 0;
+}
+
+.showcase .showcase-caption h3,
+.showcase .showcase-caption p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.showcase .showcase-caption h3 {
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    .showcase .showcase-track { gap: 16px; }
+    .showcase .showcase-card { width: min(80vw, 340px); }
+    .showcase .showcase-media { border-radius: 14px; }
+}
