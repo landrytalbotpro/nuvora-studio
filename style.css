@@ -2473,3 +2473,44 @@ h3,
         padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
     }
 }
+
+/* ==================================================
+   FOOTER — texto inferior legible
+================================================== */
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+    font-size: 13px;
+    color: rgba(255,255,255,.62);
+}
+
+.footer .nuvora-legal-link {
+    max-width: var(--max-width);
+    margin: 14px auto 0 !important;
+    text-align: left !important;
+    font-size: 13px !important;
+    opacity: 1 !important;
+    color: rgba(255,255,255,.62);
+}
+
+.footer .nuvora-legal-link a:hover {
+    color: #fff !important;
+}
+
+@media (max-width: 550px) {
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 780px) {
+    .footer {
+        padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
+    }
+}
