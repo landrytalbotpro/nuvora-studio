@@ -2644,3 +2644,18 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
     color: #111;
     text-decoration-color: var(--violet);
 }
+
+/* ==================================================
+   SIN NÚMEROS VIOLETA en toda la web
+================================================== */
+
+.project-number,
+.section-number,
+.why-item > span:first-child,
+.portfolio-note > span {
+    display: none;
+}
+
+.statement {
+    grid-template-columns: minmax(0, 1fr);
+}
