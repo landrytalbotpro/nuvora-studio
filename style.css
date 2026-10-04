@@ -2514,3 +2514,46 @@ h3,
         padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
     }
 }
+
+/* ==================================================
+   CARRUSEL — título "Proyectos" fijo encima de las tarjetas
+================================================== */
+
+.projects .showcase.is-pinned .showcase-sticky {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    top: calc(50svh - 215px);
+}
+
+.projects .showcase.is-pinned .showcase-sticky::before {
+    content: "Proyectos";
+    padding: 0 42px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(32px, 3.4vw, 48px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: var(--black);
+}
+
+html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
+    content: "Projets";
+}
+
+@media (max-width: 900px) {
+    .projects .showcase.is-pinned .showcase-sticky {
+        gap: 20px;
+        top: calc(50svh - 180px);
+    }
+    .projects .showcase.is-pinned .showcase-sticky::before {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    .projects .showcase.is-pinned .showcase-sticky::before {
+        font-size: 30px;
+        letter-spacing: -1.2px;
+    }
+}
