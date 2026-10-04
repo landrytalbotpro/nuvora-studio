@@ -2618,3 +2618,10 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
     .projects .showcase.is-pinned .showcase-sticky { gap: 28px; }
     .showcase-sticky > .section-heading { padding: 0 25px; }
 }
+
+/* Carrusel: más espacio entre el texto y las tarjetas */
+.projects .showcase.is-pinned .showcase-sticky { gap: 64px; }
+
+@media (max-width: 900px) {
+    .projects .showcase.is-pinned .showcase-sticky { gap: 44px; }
+}
