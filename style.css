@@ -2619,9 +2619,9 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
     .showcase-sticky > .section-heading { padding: 0 25px; }
 }
 
-/* Carrusel: más espacio entre el texto y las tarjetas */
-.projects .showcase.is-pinned .showcase-sticky { gap: 100px; }
+/* Carrusel: más espacio entre el texto y las tarjetas (se adapta a la altura de la pantalla) */
+.projects .showcase.is-pinned .showcase-sticky { gap: clamp(90px, 16svh, 150px); }
 
 @media (max-width: 900px) {
-    .projects .showcase.is-pinned .showcase-sticky { gap: 72px; }
+    .projects .showcase.is-pinned .showcase-sticky { gap: clamp(56px, 12svh, 110px); }
 }
