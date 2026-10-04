@@ -2580,3 +2580,16 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
         letter-spacing: -.5px;
     }
 }
+
+/* Proyectos (home): encabezado más compacto y más arriba */
+.projects { padding-top: 48px; }
+.projects .section-heading .section-label { margin-bottom: 16px; }
+.projects .section-heading .section-intro { margin-top: 14px; }
+
+@media (max-width: 900px) {
+    .projects { padding-top: 36px; }
+}
+
+@media (max-width: 550px) {
+    .projects { padding-top: 28px; }
+}
