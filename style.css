@@ -2625,3 +2625,22 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
 @media (max-width: 900px) {
     .projects .showcase.is-pinned .showcase-sticky { gap: clamp(56px, 12svh, 110px); }
 }
+
+/* Proyectos: enlace inferior discreto y sin "08" */
+.projects .portfolio-note > span {
+    display: none;
+}
+
+.projects .portfolio-note p a {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    text-decoration-color: rgba(17,17,17,.2);
+    text-underline-offset: 4px;
+}
+
+.projects .portfolio-note p a:hover {
+    color: #111;
+    text-decoration-color: var(--violet);
+}
