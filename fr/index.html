@@ -649,7 +649,10 @@
             return;
         }
         sc.classList.add('is-pinned');
+        var head = sc.parentElement.querySelector('.section-heading');
+        if (head && head.parentElement !== sticky) sticky.insertBefore(head, track);
         dist = Math.max(track.scrollWidth - sticky.clientWidth, 0);
+        sticky.style.top = Math.max(16, Math.min(90, (window.innerHeight - sticky.offsetHeight) / 2)) + 'px';
         sc.style.height = (sticky.offsetHeight + dist) + 'px';
         update();
     }
