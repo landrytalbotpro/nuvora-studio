@@ -2557,3 +2557,26 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
         letter-spacing: -1.2px;
     }
 }
+
+/* Carrusel: más aire entre el título y las tarjetas */
+.projects .showcase.is-pinned .showcase-sticky {
+    gap: 56px;
+    top: calc(50svh - 245px);
+}
+
+.projects .showcase.is-pinned .showcase-sticky::before {
+    letter-spacing: -1px;
+}
+
+@media (max-width: 900px) {
+    .projects .showcase.is-pinned .showcase-sticky {
+        gap: 36px;
+        top: calc(50svh - 200px);
+    }
+}
+
+@media (max-width: 550px) {
+    .projects .showcase.is-pinned .showcase-sticky::before {
+        letter-spacing: -.5px;
+    }
+}
