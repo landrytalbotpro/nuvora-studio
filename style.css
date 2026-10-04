@@ -2593,3 +2593,28 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
 @media (max-width: 550px) {
     .projects { padding-top: 28px; }
 }
+
+/* ==================================================
+   CARRUSEL — el encabezado se queda fijo con las tarjetas
+================================================== */
+
+.projects .showcase.is-pinned .showcase-sticky::before {
+    content: none;
+    display: none;
+}
+
+.projects .showcase.is-pinned .showcase-sticky {
+    gap: 36px;
+    top: 80px;
+}
+
+.showcase-sticky > .section-heading {
+    width: 100%;
+    margin: 0;
+    padding: 0 42px;
+}
+
+@media (max-width: 900px) {
+    .projects .showcase.is-pinned .showcase-sticky { gap: 28px; }
+    .showcase-sticky > .section-heading { padding: 0 25px; }
+}
