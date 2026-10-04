@@ -2441,3 +2441,35 @@ h3,
     .services-list .service { padding: 24px; border-radius: 16px; }
     .services-grid .service-compact { padding: 24px; border-radius: 16px; }
 }
+
+/* ==================================================
+   LIMPIEZA — sin líneas inútiles + footer visible en móvil
+================================================== */
+
+.services .portfolio-note {
+    border-top: none;
+    margin-top: 40px;
+    padding-top: 0;
+}
+
+.footer-bottom {
+    border-top: none;
+}
+
+/* 3 packs (Contacto) en una sola fila */
+.services-list:has(> .service:nth-child(3):last-child) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+    .services-list:has(> .service:nth-child(3):last-child) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* La barra verde de WhatsApp ya no tapa el © del footer */
+@media (max-width: 780px) {
+    .footer {
+        padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+    }
+}
