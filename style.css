@@ -2371,3 +2371,73 @@ h3,
 .visual-label span {
     display: none;
 }
+
+/* ==================================================
+   SERVICIOS en tarjetas + botones redondeados en toda la web
+================================================== */
+
+.contact-button,
+.footer-contact {
+    border-radius: 999px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    border-top: none;
+}
+
+.services-list .service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 20px;
+    background: #1a1a1a;
+    transition: border-color .25s ease, transform .25s ease;
+}
+
+.services-list .service:hover {
+    border-color: rgba(108,99,255,.55);
+    transform: translateY(-3px);
+}
+
+.services-list .service-number {
+    padding: 5px 10px;
+    border: 1px solid rgba(53,211,154,.35);
+    border-radius: 999px;
+    font-size: 10px;
+}
+
+.services-list .service-main h3 {
+    font-size: 24px;
+}
+
+.services-list .service-main p {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #9a9a9a;
+}
+
+.services-grid {
+    gap: 16px;
+    background: none;
+    border: none;
+}
+
+.services-grid .service-compact {
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 20px;
+    background: #1a1a1a;
+    padding: 30px;
+}
+
+@media (max-width: 900px) {
+    .services-list { grid-template-columns: 1fr; gap: 12px; }
+    .services-list .service { padding: 24px; border-radius: 16px; }
+    .services-grid .service-compact { padding: 24px; border-radius: 16px; }
+}
