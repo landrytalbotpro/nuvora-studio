@@ -131,6 +131,13 @@
     .demo-case .case { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
     .demo-case .case-body { padding: 0; }
     .demo-case .why-header { margin-bottom: 40px; }
+    .projects.demo-case { padding-left: 42px; padding-right: 42px; padding-bottom: 0; }
+    .projects.demo-case + .why { padding-top: 96px; }
+    @media (max-width: 900px) { .projects.demo-case + .why { padding-top: 72px; } }
+    @media (max-width: 550px) {
+        .projects.demo-case { padding-left: 18px; padding-right: 18px; }
+        .projects.demo-case + .why { padding-top: 56px; }
+    }
     @media (max-width: 900px) {
         .cases { grid-template-columns: 1fr; gap: 52px; }
         .case-media { border-radius: 14px; }
