@@ -26,6 +26,16 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/services.html"/>
   </url>
   <url>
+    <loc>https://nuvorastudio.es/turismo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/tourisme.html"/>
+  </url>
+  <url>
+    <loc>https://nuvorastudio.es/fr/tourisme.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/turismo.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/tourisme.html"/>
+  </url>
+  <url>
     <loc>https://nuvorastudio.es/fr/services.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/servicios.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/services.html"/>
