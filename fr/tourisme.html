@@ -136,6 +136,30 @@
         .case-media { border-radius: 14px; }
         .demo-case .case { grid-template-columns: 1fr; gap: 22px; }
     }
+
+    /* ---------- PRECIOS: esquinas redondeadas ---------- */
+    .pricing-card {
+        border-radius: 22px;
+        background: #fff;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .pricing-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(17,17,17,.07);
+    }
+    .pricing-card.featured { background: #faf9ff; }
+    .pricing-card.featured:hover { box-shadow: 0 0 0 1px var(--violet), 0 18px 40px rgba(108,99,255,.14); }
+    .pricing-card-badge { border-radius: 999px; }
+    .pricing-card-cta { border-radius: 999px; }
+    .pricing-note-item { border-radius: 18px; }
+
+    @media (max-width: 900px) {
+        .pricing-card { border-radius: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .pricing-card, .pricing-card:hover { transform: none; transition: none; }
+    }
   </style>
 </head>
 
