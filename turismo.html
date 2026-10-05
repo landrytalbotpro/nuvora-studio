@@ -131,6 +131,12 @@
     .demo-case .case { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
     .demo-case .case-body { padding: 0; }
     .demo-case .why-header { margin-bottom: 40px; }
+    .page-hero.has-visual { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: center; }
+    .page-hero-visual { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 22px; background: #e6e5df; }
+    @media (max-width: 900px) {
+        .page-hero.has-visual { grid-template-columns: 1fr; gap: 32px; }
+        .page-hero-visual { aspect-ratio: 16 / 10; border-radius: 18px; }
+    }
     .projects.demo-case { padding-left: 42px; padding-right: 42px; padding-bottom: 0; }
     .projects.demo-case + .why { padding-top: 96px; }
     @media (max-width: 900px) { .projects.demo-case + .why { padding-top: 72px; } }
@@ -240,7 +246,9 @@
      PAGE HERO
 ================================================== -->
 
-<section class="page-hero">
+<section class="page-hero has-visual">
+
+    <div class="page-hero-text">
 
     <p class="section-label">
         CASAS RURALES · APARTAMENTOS TURÍSTICOS
@@ -256,6 +264,10 @@
         y en francés, con reserva directa por WhatsApp. Sin comisiones, sin
         motor de reservas que gestionar. Lista en una semana.
     </p>
+
+    </div>
+
+    <img class="page-hero-visual" src="https://images.unsplash.com/photo-1694184886639-32fa43e5607e?auto=format&fit=crop&w=1100&h=825&q=75" alt="Valle verde de Asturias" width="1100" height="825" decoding="async">
 
 </section>
 
@@ -453,7 +465,7 @@
 
         <article class="case">
 
-            <a href="https://landrytalbotpro.github.io/casa-les-fayes/" class="case-media">
+            <a href="https://landrytalbotpro.github.io/casa-les-fayes/?lang=es" class="case-media">
                 <img src="images/casa-les-fayes.jpg" alt="Web de demostración de Casa Les Fayes" width="1200" height="676" loading="lazy" decoding="async">
             </a>
 
@@ -474,7 +486,7 @@
                     <li>Sin comisiones</li>
                 </ul>
 
-                <a href="https://landrytalbotpro.github.io/casa-les-fayes/" class="case-link">Ver la demo ↗&#xFE0E;</a>
+                <a href="https://landrytalbotpro.github.io/casa-les-fayes/?lang=es" class="case-link">Ver la demo ↗&#xFE0E;</a>
 
             </div>
 
