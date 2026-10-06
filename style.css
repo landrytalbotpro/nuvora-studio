@@ -2659,3 +2659,21 @@ html[lang="fr"] .projects .showcase.is-pinned .showcase-sticky::before {
 .statement {
     grid-template-columns: minmax(0, 1fr);
 }
+
+/* ==================================================
+   ETIQUETA DE IDIOMA EN LAS DEMOS (ES / FR)
+================================================== */
+
+.lang-tag {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 3px 9px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    color: #555;
+}
