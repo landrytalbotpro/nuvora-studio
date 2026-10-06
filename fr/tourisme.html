@@ -51,7 +51,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-V2VKRWEJ8G');
+    var nuvoraInterne = false; try { var m = location.search.match(/[?&]interne=(0|1)/); if (m) localStorage.setItem('nuvora_interne', m[1]); nuvoraInterne = localStorage.getItem('nuvora_interne') === '1'; } catch (e) {}
+    gtag('config', 'G-V2VKRWEJ8G', nuvoraInterne ? { traffic_type: 'internal' } : {});
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="wa.me"]'); if (a) gtag('event', 'clic_whatsapp', { page_path: location.pathname, link_text: (a.textContent || '').trim().slice(0, 60) }); });
   </script>
   <style>
     .cases {
