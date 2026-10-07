@@ -239,7 +239,7 @@ html{scroll-padding-top:70px}
 /* --- v3: diseño anterior + detalles en morado y azul, sin degradados --- */
 .kinetic .dot{color:var(--accent)}
 .kinetic .line:nth-child(2) .dot{color:var(--blue)}
-mark.hl{background:none;color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:.12em;text-underline-offset:.14em}
+mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
 .btn.grad,.wa-sticky{background:#6C63FF;color:#fff}
 .btn.grad:hover{transform:translateY(-2px);background:var(--blue)}
 .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
@@ -519,16 +519,6 @@ mark.hl{background:none;color:inherit;text-decoration:underline;text-decoration-
   gsap.from('.brand li',{x:-30,opacity:0,duration:.6,stagger:.08,ease:'power3.out',scrollTrigger:{trigger:'.brand',start:'top 80%'}});
   gsap.from('.board figure',{y:40,opacity:0,scale:.96,duration:.8,stagger:.12,ease:'power3.out',scrollTrigger:{trigger:'.board',start:'top 85%'}});
   gsap.from('.ia article',{y:50,opacity:0,duration:.8,stagger:.12,ease:'power3.out',scrollTrigger:{trigger:'.ia',start:'top 85%'}});
-  // Precios: tarjetas que suben + cifras que cuentan
-  gsap.from('.prices .pk',{y:60,opacity:0,duration:.8,stagger:.14,ease:'power3.out',scrollTrigger:{trigger:'.prices',start:'top 85%'}});
-  document.querySelectorAll('.pr[data-count]').forEach(function(el){
-    var end=+el.dataset.count, txt=el.textContent, sep=txt.indexOf('.')>-1?'.':(txt.indexOf('\u202f')>-1?'\u202f':(/\d \d/.test(txt)?' ':''));
-    var o={v:0};
-    gsap.to(o,{v:end,duration:1.4,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%'},
-      onUpdate:function(){var n=Math.round(o.v).toString();if(sep&&n.length>3)n=n.slice(0,-3)+sep+n.slice(-3);el.textContent=n+' €';},
-      onComplete:function(){el.textContent=txt;}});
-  });
-
   var offs = [[0,120,-3],[80,60,4],[-80,80,-4],[0,100,3],[80,90,-3],[-60,80,4],[40,100,-2]];
   document.querySelectorAll('.bento .tile').forEach(function(t,i){
     var o = offs[i % offs.length];
