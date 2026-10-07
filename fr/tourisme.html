@@ -2,13 +2,195 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuvora Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sites pour gîtes et locations en Espagne — Nuvora Studio</title>
+<meta name="description" content="Site et fiche Google pour votre logement, en espagnol et en français, avec réservation directe par WhatsApp. Sans commission. Prêt en une semaine.">
 <meta name="robots" content="noindex, follow">
-<link rel="canonical" href="https://nuvorastudio.es/fr/">
-<meta http-equiv="refresh" content="0; url=./">
-<script>location.replace('./');</script>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#000;color:#EEE8DA;font-family:system-ui,sans-serif}a{color:#7C85FF}</style>
+<link rel="alternate" hreflang="es" href="https://nuvorastudio.es/turismo.html">
+<link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/tourisme.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sites pour gîtes et locations en Espagne — Nuvora Studio">
+<meta property="og:description" content="Site et fiche Google pour votre logement, en espagnol et en français, avec réservation directe par WhatsApp. Sans commission. Prêt en une semaine.">
+<meta property="og:url" content="https://nuvorastudio.es/fr/tourisme.html">
+<meta property="og:image" content="https://nuvorastudio.es/images/p-casa.webp">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2VKRWEJ8G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  var nuvoraInterne = false; try { var m = location.search.match(/[?&]interne=(0|1)/); if (m) localStorage.setItem('nuvora_interne', m[1]); nuvoraInterne = localStorage.getItem('nuvora_interne') === '1'; } catch (e) {}
+  gtag('config', 'G-V2VKRWEJ8G', nuvoraInterne ? { traffic_type: 'internal' } : {});
+  document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="wa.me"]'); if (a) gtag('event', 'clic_whatsapp', { page_path: location.pathname, link_text: (a.textContent || '').trim().slice(0, 60) }); });
+</script>
+<style>
+/* Landing turismo (fuera del menú): hero → 3 opciones → demo → 3 razones → FAQ → contacto. Misma identidad que la home. */
+:root{
+  --bg:#EEE8DA; --paper:#FAF7F0; --ink:#000000; --muted:#5E5A52; --accent:#2F3CFF; --rural:#2F4A35; --wheat:#E8C77A;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(18px,4vw,48px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397; --accent:#7C85FF; --rural:#9DB89F; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397; --accent:#7C85FF; --rural:#9DB89F; color-scheme:dark; }
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3{text-wrap:balance}
+.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(env(safe-area-inset-top,0px) + 16px) var(--gut) 16px;background:var(--bg)}
+.wordmark{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:-.01em;text-decoration:none;transform:skewX(-8deg);display:inline-block}
+.nav-r{display:flex;gap:18px;align-items:center;font-size:.95rem}
+.nav-r .lang{opacity:.6;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.sm{padding:10px 18px;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rural)}
+.hero{padding:8vh var(--gut) 10vh}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8.5vw,7.5rem);line-height:.92;letter-spacing:-.045em;margin:18px 0 0;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--rural)}
+.hero p{max-width:46ch;font-size:1.2rem;color:var(--muted);margin:32px 0}
+.sec{padding:10vh var(--gut) 4vh}
+.sec-t{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.6rem);letter-spacing:-.035em;line-height:1;margin:10px 0 18px;max-width:18ch}
+.lead{max-width:56ch;color:var(--muted);margin:0 0 5vh}
+.prices{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px;align-items:stretch}
+.pk{display:flex;flex-direction:column;padding:28px 24px;border:2px solid var(--ink);border-radius:4px;min-width:0}
+.pk.star{background:var(--ink);color:var(--bg);border-radius:28px 4px 28px 4px;transform:translateY(-14px)}
+.pk .tag{align-self:flex-start;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--wheat);color:#000;padding:5px 10px;border-radius:999px;margin-bottom:12px}
+.pk h3{font-family:var(--display);font-weight:500;font-size:1.15rem;margin:0}
+.pk .pr{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,4.4vw,3.4rem);letter-spacing:-.04em;margin:12px 0 4px;font-variant-numeric:tabular-nums}
+.pk-d{margin:0 0 16px;opacity:.8}
+.pk ul{margin:0 0 20px;padding-left:1.1em;flex:1}
+.pk li{margin-bottom:6px}
+.when{font-weight:600;margin:0 0 16px}
+.pk .btn{align-self:flex-start}
+.pk.star .btn{background:var(--bg);color:var(--ink)}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.notes p{margin:0;padding:18px 20px;background:var(--paper);border-radius:12px;color:var(--muted)}
+.notes strong{color:var(--ink)}
+.demo{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(20px,4vw,56px);align-items:center}
+.demo-img{display:block;border-radius:18px;overflow:hidden;background:var(--paper);aspect-ratio:1000/604;max-width:100%}
+.demo-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.demo-img:hover img{transform:scale(1.03)}
+.demo h3{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em;margin:8px 0 10px}
+.demo p{color:var(--muted);margin:0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.chips li{font-size:.85rem;font-weight:600;border:1.5px solid var(--ink);padding:6px 12px;border-radius:999px}
+.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:w}
+.why li{border-top:2px solid var(--ink);padding-top:18px;counter-increment:w}
+.why li::before{content:counter(w,decimal-leading-zero);font-family:var(--display);font-weight:800;color:var(--rural);font-size:.95rem}
+.why strong{display:block;font-family:var(--display);font-weight:500;font-size:1.3rem;letter-spacing:-.02em;margin:10px 0 8px}
+.why span{color:var(--muted)}
+.faq details{border-top:2px solid var(--ink);padding:20px 0}
+.faq details:last-child{border-bottom:2px solid var(--ink)}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:12px 0 0;color:var(--muted);max-width:60ch}
+.offer{margin-top:10vh;padding:14vh var(--gut);background:var(--ink);color:var(--bg)}
+.offer h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,7vw,5.5rem);letter-spacing:-.04em;line-height:.95;margin:0 0 24px;max-width:12ch}
+.offer p{max-width:46ch;font-size:1.2rem;opacity:.75;margin:0 0 32px}
+.offer .btn{background:var(--bg);color:var(--ink)}
+.note{padding:28px var(--gut);font-size:.9rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.wa-sticky{display:none}
+@media (max-width:820px){
+  .prices,.notes,.demo,.why{grid-template-columns:1fr}
+  .pk.star{transform:none}
+  .nav .btn{display:none}
+  .wa-sticky{display:flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;justify-content:center;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;padding:15px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .note{padding-bottom:96px}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .btn,.demo-img img{transition:none} }
+</style>
 </head>
-<body><p>Redirection vers la page d’accueil… <a href="./">Y aller</a></p></body>
+<body>
+<nav class="nav" aria-label="Navigation principale">
+  <a href="./" class="wordmark">NUVORA STUDIO</a>
+  <div class="nav-r"><a class="lang" href="../turismo.html" hreflang="es" lang="es">ES</a><a class="btn sm" href="https://wa.me/34675153535">Parlons-en</a></div>
+</nav>
+
+<main>
+<header class="hero">
+  <span class="eyebrow">Casas rurales · Locations touristiques</span>
+  <h1>Plus de réservations directes, <em>côté espagnol aussi.</em></h1>
+  <p>On crée le site et la fiche Google de votre logement, en espagnol et en français, avec réservation directe par WhatsApp. Sans commission, sans moteur de réservation à gérer. Prêt en une semaine.</p>
+  <a class="btn" href="https://wa.me/34675153535">Parlez-nous de votre logement</a>
+</header>
+
+<section class="sec" id="opciones">
+  <span class="eyebrow">Trois options</span>
+  <h2 class="sec-t">Choisissez, écrivez-nous.</h2>
+  <p class="lead">Prix fixé avant de commencer. Les 5 premiers logements bénéficient de 20 % de remise.</p>
+  <div class="prices">
+    <article class="pk">
+      <h3>Fiche Google</h3><p class="pr">190 €</p><p class="pk-d">Être trouvé sur Google Maps.</p>
+      <ul><li>Fiche complète et optimisée</li><li>Description en espagnol et en français</li><li>Photos triées et bonnes catégories</li><li>Boutons WhatsApp et réservation</li><li>QR code pour demander des avis</li></ul><p class="when">Livraison en 3-4 jours</p>
+      <a class="btn ghost" href="https://wa.me/34675153535?text=Bonjour%2C%20la%20Fiche%20Google%20pour%20mon%20logement%20%28190%20%E2%82%AC%29%20m%E2%80%99int%C3%A9resse">Je la veux</a>
+    </article>
+    <article class="pk star">
+      <span class="tag">Le plus complet</span>
+      <h3>Pack Site + Google</h3><p class="pr">690 €</p><p class="pk-d">Tout pour réserver en direct.</p>
+      <ul><li>Le site ES/FR complet</li><li>La fiche Google optimisée</li><li>Tout connecté : site, Maps et WhatsApp</li><li>90 € d’économie par rapport au séparé</li></ul><p class="when">Livraison en 1 à 2 semaines</p>
+      <a class="btn" href="https://wa.me/34675153535?text=Bonjour%2C%20le%20Pack%20Site%20%2B%20Google%20pour%20mon%20logement%20%28690%20%E2%82%AC%29%20m%E2%80%99int%C3%A9resse">Je le veux</a>
+    </article>
+    <article class="pk">
+      <h3>Site Rural ES/FR</h3><p class="pr">590 €</p><p class="pk-d">Votre logement, en deux langues.</p>
+      <ul><li>Site sur mesure en espagnol et en français</li><li>Galerie, équipements, tarifs et carte</li><li>Réservation directe par WhatsApp</li><li>Bouton vers votre Booking ou Escapada Rural</li><li>Parfait sur mobile</li></ul><p class="when">Livraison en 1 semaine</p>
+      <a class="btn ghost" href="https://wa.me/34675153535?text=Bonjour%2C%20le%20Site%20Rural%20ES/FR%20%28590%20%E2%82%AC%29%20m%E2%80%99int%C3%A9resse">Je le veux</a>
+    </article>
+  </div>
+  <div class="notes">
+    <p><strong>Maintenance saisonnière : 15 €/mois.</strong> Optionnelle et sans engagement. On met à jour vos prix, photos et dates de saison quand vous en avez besoin. Pour un suivi complet, la maintenance complète coûte 45 €/mois.</p>
+    <p><strong>Pas de frais d’hébergement.</strong> Le site vous appartient. Vous ne payez que le nom de domaine (environ 15 € par an, à votre nom).</p>
+  </div>
+</section>
+
+<section class="sec" id="demo">
+  <div class="demo">
+    <a class="demo-img" href="https://landrytalbotpro.github.io/casa-les-fayes/?lang=fr"><img src="../images/p-casa.webp" alt="Site de démonstration de Casa Les Fayes, maison de village à Llanes" width="1000" height="604" loading="lazy"></a>
+    <div>
+      <span class="eyebrow">La démo · Maison de village à Llanes</span>
+      <h3>Casa Les Fayes</h3>
+      <p>En espagnol et en français, avec photos, tarifs, carte et un formulaire qui envoie la demande de réservation directement sur votre WhatsApp.</p>
+      <ul class="chips"><li>ES / FR</li><li>Réservation WhatsApp</li><li>Sans commission</li></ul>
+      <a class="btn ghost" href="https://landrytalbotpro.github.io/casa-les-fayes/?lang=fr">Voir la démo</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="porque">
+  <span class="eyebrow">Pourquoi ça marche</span>
+  <h2 class="sec-t">Trois raisons pour votre logement.</h2>
+  <ol class="why"><li><strong>L’espagnol, géré pour vous.</strong><span>Textes, fiche Google et réponses types en espagnol naturel : vous touchez les voyageurs espagnols sans jongler entre les langues.</span></li><li><strong>Des réservations sans commission.</strong><span>Chaque réservation directe par WhatsApp ne passe pas par Booking. Vous restez sur les plateformes, mais vous en dépendez moins.</span></li><li><strong>On est sur place.</strong><span>Basés dans les Asturies, on connaît la région et on parle français. Un interlocuteur, dans votre langue, à côté de chez vous.</span></li></ol>
+</section>
+
+<section class="sec" id="faq">
+  <h2 class="sec-t">Avant de nous écrire</h2>
+  <div class="faq"><details><summary>Je suis déjà sur Booking, pourquoi un site ?</summary><p>Pour que ceux qui vous connaissent déjà, ou vous trouvent sur Google, réservent chez vous en direct, sans commission. Booking continue de vous amener de nouveaux clients.</p></details><details><summary>Faut-il un moteur de réservation ?</summary><p>Non. Le bouton « Réserver » ouvre votre WhatsApp avec les dates déjà écrites, ou renvoie vers la plateforme que vous utilisez déjà.</p></details><details><summary>De quoi avez-vous besoin ?</summary><p>Vos photos, vos tarifs et un appel de 30 minutes. Les textes en espagnol et en français, c’est nous qui les écrivons.</p></details><details><summary>Le site m’appartient vraiment ?</summary><p>Oui. Vous ne louez rien : le site et le nom de domaine sont à votre nom.</p></details></div>
+</section>
+
+<section class="offer" id="contacto">
+  <h2>Votre logement, en deux langues.</h2>
+  <p>Écrivez-nous avec le nom de votre logement, on vous dit ce qu’on améliorerait, sans engagement.</p>
+  <a class="btn" href="https://wa.me/34675153535">Écrire sur WhatsApp</a>
+</section>
+</main>
+
+<footer class="note"><span>© 2026 Nuvora Studio · Asturias / Asturies</span><span><a href="./">Nuvora Studio</a> · <a href="confidentialite.html">Confidentialité</a></span></footer>
+<a class="wa-sticky" href="https://wa.me/34675153535">💬 Écrivez-nous sur WhatsApp</a>
+</body>
 </html>
