@@ -41,7 +41,7 @@
   "inLanguage": "es",
   "makesOffer": [
     {"@type": "Offer", "name": "Web", "price": "550", "priceCurrency": "EUR"},
-    {"@type": "Offer", "name": "Tu marca en 10 días", "price": "1200", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Tu marca en 10 días", "price": "1200", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Premium", "price": "2300", "priceCurrency": "EUR"}
   ]
 }
@@ -127,13 +127,26 @@ h1,h2,h3{text-wrap:balance}
 .l-web .img svg{width:100%;height:100%;display:block}
 .l-web h3{font-family:var(--client);font-weight:800;font-size:1.35rem;line-height:1.02;letter-spacing:-.03em;margin:0}
 .l-web .cta{align-self:flex-start;background:var(--f-green);color:var(--f-cream);font-size:.85rem;font-weight:600;padding:10px 16px;border-radius:999px}
-.l-post{background:var(--f-green);color:var(--f-cream);opacity:0;display:flex;flex-direction:column}
-.l-post .head{display:flex;align-items:center;gap:10px;padding:14px 16px;font-size:.85rem;font-weight:600}
-.l-post .av{width:28px;height:28px;border-radius:50%;background:var(--f-wheat)}
-.l-post .pic{flex:1;margin:0 16px;border-radius:4px;background:var(--f-wheat);color:var(--f-green);display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
-.l-post .pic small{font-size:.8rem;font-weight:600}
-.l-post .pic p{font-family:var(--client);font-weight:800;font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.02;letter-spacing:-.03em;margin:6px 0 0}
-.l-post .foot{padding:12px 16px 16px;font-size:.85rem;opacity:.85}
+.l-post{background:#FFFFFF;color:#0E0E0E;opacity:0;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+.l-post .head{display:flex;align-items:center;gap:9px;padding:10px 12px}
+.l-post .av{width:30px;height:30px;border-radius:50%;background:#FF5A1F;padding:2px;box-shadow:0 0 0 2px #fff,0 0 0 3.5px #FF5A1F;display:grid;place-items:center;flex:none}
+.l-post .av svg{width:20px;height:20px}
+.l-post .who{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.l-post .who b{font-size:.8rem}
+.l-post .who span{font-size:.68rem;color:#6B6B6B}
+.l-post .more{margin-left:auto;font-weight:700;letter-spacing:1px}
+.l-post .pic{position:relative;flex:1;min-height:0;background:#FF5A1F;overflow:hidden}
+.l-post .pic svg{position:absolute;inset:0;width:100%;height:100%}
+.l-post .pic .txt{position:absolute;left:14px;right:14px;top:14px;color:#0E0E0E}
+.l-post .pic small{display:block;font-family:var(--client);font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.l-post .pic p{font-family:var(--client);font-weight:800;font-size:clamp(1.15rem,2vw,1.45rem);line-height:.98;letter-spacing:-.035em;margin:6px 0 10px;max-width:9ch}
+.l-post .pic .pill{display:inline-block;background:#0E0E0E;color:#F4F1EA;font-size:.66rem;font-weight:700;padding:5px 9px;border-radius:999px}
+.l-post .acts{display:flex;gap:12px;padding:9px 12px 4px;align-items:center}
+.l-post .acts svg{width:20px;height:20px;fill:none;stroke:#0E0E0E;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.l-post .acts .heart{fill:#ED4956;stroke:#ED4956}
+.l-post .acts .save{margin-left:auto}
+.l-post .likes{padding:0 12px;font-size:.74rem;font-weight:700}
+.l-post .cap{padding:2px 12px 10px;font-size:.72rem;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
 /* sections */
 .sec{padding:14vh var(--gut) 6vh}
@@ -237,6 +250,9 @@ h1,h2,h3{text-wrap:balance}
 .static .steps{display:none}
 
 html{scroll-padding-top:70px}
+p,li,small,.cap,.pk-d,.extra,.lead{text-wrap:pretty}
+.sec-t{text-wrap:balance;max-width:22ch}
+.ln{display:block}
 /* --- v3: diseño anterior + detalles en morado y azul, sin degradados --- */
 .kinetic .dot{color:var(--accent)}
 .kinetic .line:nth-child(2) .dot{color:var(--blue)}
@@ -316,19 +332,19 @@ mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
     <span class="line"><span>Contenido<span class="dot">.</span></span></span>
   </h1>
   <div class="hero-foot">
-    <p>Tu marca, tu web y tus redes. <mark class="hl">Un solo equipo</mark>, sin coordinar a tres personas distintas.</p>
-    <a class="btn grad" href="https://wa.me/34675153535">Hablemos por WhatsApp</a>
+    <p>Tu marca, tu web y tus redes. <mark class="hl">Un solo equipo</mark>, sin coordinar a tres personas distintas.</p>
+    <a class="btn grad" href="https://wa.me/34675153535">Hablemos por WhatsApp</a>
   </div>
-  <ul class="hero-badges"><li>Marca + web + redes en <b>10 días</b></li><li>Precio cerrado</li><li>Español y francés</li></ul>
-  <div class="cue" style="margin-top:28px">Baja y mira cómo se construye una marca</div>
+  <ul class="hero-badges"><li>Marca + web + redes en <b>10 días</b></li><li>Precio cerrado</li><li>Español y francés</li></ul>
+  <div class="cue" style="margin-top:28px">Baja y mira cómo se construye una marca</div>
 </header>
 
 <section class="build" aria-label="Cómo construimos una marca">
   <div class="caps">
-    <h2>Ejemplo: Salitre, escuela de surf en Salinas</h2>
-    <p class="cap is-on"><strong>1. Tu marca</strong><span>Logo, colores y tipografías. La base de todo lo demás.</span></p>
-    <p class="cap"><strong>2. Tu web</strong><span>La misma identidad, convertida en una web rápida que funciona en el móvil.</span></p>
-    <p class="cap"><strong>3. Tus redes</strong><span>Plantillas para Instagram que se reconocen al primer vistazo.</span></p>
+    <h2>Ejemplo: Salitre, escuela de surf en Salinas</h2>
+    <p class="cap is-on"><strong>1. Tu marca</strong><span>Logo, colores y tipografías. La base de todo lo demás.</span></p>
+    <p class="cap"><strong>2. Tu web</strong><span>La misma identidad, convertida en una web rápida que funciona en el móvil.</span></p>
+    <p class="cap"><strong>3. Tus redes</strong><span>Plantillas para Instagram que se reconocen al primer vistazo.</span></p>
     <div class="steps" aria-hidden="true"><i class="is-on"></i><i></i><i></i></div>
   </div>
   <div class="stage" aria-hidden="true">
@@ -345,35 +361,37 @@ mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
       <div class="layer l-web">
         <div class="bar"><span>salitre</span><b></b></div>
         <div class="img"><svg viewBox="0 0 200 140" preserveAspectRatio="xMidYMid slice"><circle cx="140" cy="48" r="26" fill="#F4F1EA"/><path d="M0 92 Q25 72 50 92 T100 92 T150 92 T200 92 V140 H0Z" fill="#0E0E0E"/><path d="M0 112 Q25 94 50 112 T100 112 T150 112 T200 112 V140 H0Z" fill="#F4F1EA" opacity=".9"/></svg></div>
-        <h3>Clases de surf en Salinas, todo el año</h3>
+        <h3>Clases de surf en Salinas, todo el año</h3>
         <span class="cta">Reservar clase</span>
       </div>
       <div class="layer l-post">
-        <div class="head"><span class="av"></span>salitre.surf</div>
-        <div class="pic"><small>Este sábado</small><p>Olas de 1,5 m. Iniciación 30 €</p></div>
-        <div class="foot">312 me gusta · Tabla y neopreno incluidos</div>
+        <div class="head"><span class="av"><svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="7" fill="none" stroke="#F4F1EA" stroke-width="3"/><path d="M6 27 q3.5-4 7 0 t7 0 t7 0 t7 0" fill="none" stroke="#F4F1EA" stroke-width="3"/></svg></span><span class="who"><b>salitre.surf</b><span>Salinas, Asturias</span></span><span class="more">···</span></div>
+        <div class="pic"><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMax slice"><circle cx="222" cy="150" r="42" fill="#F4F1EA"/><path d="M0 214 Q37 186 75 214 T150 214 T225 214 T300 214 V300 H0Z" fill="#0E0E0E"/><path d="M0 248 Q37 224 75 248 T150 248 T225 248 T300 248 V300 H0Z" fill="#F4F1EA"/></svg><div class="txt"><small>Este sábado</small><p>Olas de 1,5 m</p><span class="pill">Iniciación · 30 €</span></div></div>
+        <div class="acts"><svg class="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.3 3 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3 1.6-1.8 3.1-3 5.3-3 3.7 0 5.8 3.8 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 1 1-3.3-6.5A8 8 0 0 1 20 11.5zM20 20l-2.6-3"/></svg><svg viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7z M10 13l11-10"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg></div>
+        <div class="likes">312 Me gusta</div>
+        <div class="cap"><b>salitre.surf</b> Sábado de olas en Salinas 🌊 Clase de iniciación con tabla y neopreno incluidos. Escríbenos por DM.</div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="servicios">
-  <h2 class="sec-t">Todo lo que tu negocio necesita para verse bien. <mark class="hl">Con un solo equipo</mark> al otro lado.</h2>
+  <h2 class="sec-t"><span class="ln">Todo lo que tu negocio necesita.</span><span class="ln">Con un solo equipo.</span></h2>
   <ul class="svc">
-    <li><strong>Branding y <em>logo</em></strong><span>Logo, colores, tipografías y una guía sencilla para que todo sea coherente.</span></li>
-    <li><strong>Páginas <em>web</em></strong><span>A medida, rápidas, pensadas para el móvil y para que te escriban.</span></li>
-    <li><strong>Contenido para <em>redes</em></strong><span>Plantillas editables con tu marca y posts de lanzamiento.</span></li>
-    <li><strong>Digitalización con <em>IA</em></strong><span>Ficha de Google, reservas, WhatsApp, formularios y herramientas de IA.</span></li>
+    <li><strong>Branding y <em>logo</em></strong><span>Logo, colores, tipografías y una guía sencilla para que todo sea coherente.</span></li>
+    <li><strong>Páginas <em>web</em></strong><span>A medida, rápidas, pensadas para el móvil y para que te escriban.</span></li>
+    <li><strong>Contenido para <em>redes</em></strong><span>Plantillas editables con tu marca y posts de lanzamiento.</span></li>
+    <li><strong>Digitalización con <em>IA</em></strong><span>Ficha de Google, reservas, WhatsApp, formularios y herramientas de IA.</span></li>
   </ul>
 </section>
 
 <section class="sec" id="branding">
   <div class="sec-head">
-    <h2 class="sec-t">Una marca de verdad, no solo un logo.</h2>
-    <p>Ejemplo real: Corte &amp; Co., barbería. Todo lo que recibes para que tu negocio se reconozca en la calle, en la web y en Instagram.</p>
+    <h2 class="sec-t"><span class="ln">Una marca de verdad,</span><span class="ln">no solo un logo.</span></h2>
+    <p>Ejemplo real: Corte &amp; Co., barbería. Todo lo que recibes para que tu negocio se reconozca en la calle, en la web y en Instagram.</p>
   </div>
   <div class="brand">
-    <ul><li><b>Logo y variantes</b><span>Principal, monograma y versión para fondos oscuros</span></li><li><b>Paleta de colores</b><span>4 a 6 colores con sus códigos</span></li><li><b>Tipografías</b><span>Una para titulares y otra para textos</span></li><li><b>Guía de marca</b><span>PDF sencillo para usar todo bien</span></li><li><b>Aplicaciones</b><span>Tarjetas, carta, cartel y plantillas de redes</span></li></ul>
+    <ul><li><b>Logo y variantes</b><span>Principal, monograma y versión para fondos oscuros</span></li><li><b>Paleta de colores</b><span>4 a 6 colores con sus códigos</span></li><li><b>Tipografías</b><span>Una para titulares y otra para textos</span></li><li><b>Guía de marca</b><span>PDF sencillo para usar todo bien</span></li><li><b>Aplicaciones</b><span>Tarjetas, carta, cartel y plantillas de redes</span></li></ul>
     <div class="board" aria-label="Ejemplo de identidad de marca de Corte & Co.">
       <figure class="b-logo"><img src="images/b-logo.webp" alt="Logo de Corte & Co. sobre fondo crema" loading="lazy" width="900" height="900"><figcaption>Logo</figcaption></figure>
       <figure><img src="images/b-mono.webp" alt="Monograma C&C de Corte & Co." loading="lazy" width="600" height="600"><figcaption>Monograma</figcaption></figure>
@@ -384,77 +402,77 @@ mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
 
 <section class="sec" id="ia">
   <div class="sec-head">
-    <h2 class="sec-t">Usamos la IA. Para ir más rápido, no para hacerlo peor.</h2>
-    <p>La IA nos ayuda a producir más y en menos tiempo. El criterio, el diseño y la última palabra siguen siendo nuestros.</p>
+    <h2 class="sec-t"><span class="ln">La IA acelera.</span><span class="ln">Nosotros decidimos.</span></h2>
+    <p>Con IA preparamos más propuestas y más contenido, en menos tiempo. El diseño y la última palabra son siempre nuestros.</p>
   </div>
-  <div class="ia"><article><h3>Más propuestas, antes</h3><p>Bocetos de logo, variantes de color y textos en horas, no en semanas. Eliges entre más opciones.</p><small>Por eso tu marca está lista en 10 días</small></article><article><h3>Contenido sin parar</h3><p>Imágenes de ambiente, plantillas y vídeos cortos con tu marca para que tus redes no se queden vacías.</p><small>Incluido en el pack Premium</small></article><article><h3>Herramientas para tu negocio</h3><p>Respuestas automáticas a preguntas frecuentes, ayuda para contestar reseñas y textos para Google.</p><small>Te enseñamos a usarlas</small></article></div>
-  <p class="ia-note">Nada sale publicado sin que lo revisemos. Las fotos reales de tu negocio siempre ganan; la IA está para completar, no para inventar.</p>
+  <div class="ia"><article><h3>Más propuestas, antes</h3><p>Bocetos de logo, variantes de color y textos en horas, no en semanas. Eliges entre más opciones.</p><small>Por eso tu marca está lista en 10 días</small></article><article><h3>Contenido sin parar</h3><p>Imágenes de ambiente, plantillas y vídeos cortos con tu marca para que tus redes no se queden vacías.</p><small>Incluido en el pack Premium</small></article><article><h3>Herramientas para tu negocio</h3><p>Respuestas automáticas a preguntas frecuentes, ayuda para contestar reseñas y textos para Google.</p><small>Te enseñamos a usarlas</small></article></div>
+  <p class="ia-note">Nada sale publicado sin que lo revisemos. Las fotos reales de tu negocio siempre ganan; la IA está para completar, no para inventar.</p>
 </section>
 
 <section class="sec" id="trabajos">
   <div class="sec-head">
     <h2 class="sec-t">Proyectos</h2>
-    <p>Barberías, restaurantes, gimnasios, clínicas. Toca uno para ver la web en vivo.</p>
+    <p>Barberías, restaurantes, gimnasios, clínicas. Toca uno para ver la web en vivo.</p>
   </div>
   <div class="bento">
-    <a class="tile t-corte trio" href="https://landrytalbotpro.github.io/corte-co/"><span class="trio-in"><img src="images/p-cposter.webp" alt="Cartel de Corte & Co. en la calle" loading="lazy" width="900" height="599"><img src="images/p-cphone.webp" alt="Story de Corte & Co. en un móvil" loading="lazy" width="599" height="900"><img src="images/p-ccard.webp" alt="Carta de precios de Corte & Co." loading="lazy" width="424" height="877"></span><span class="meta"><strong>Corte &amp; Co.</strong><small>Barbería · Marca + web + redes</small></span></a>
-    <a class="tile t-volteo" href="https://landrytalbotpro.github.io/volteo/"><img src="images/p-volteo.webp" alt="Web de VOLTÉO en el móvil" loading="lazy" width="600" height="800"><span class="meta"><strong>VOLTÉO</strong><small>Coaching premium · Dirección visual + web</small></span></a>
+    <a class="tile t-corte trio" href="https://landrytalbotpro.github.io/corte-co/"><span class="trio-in"><img src="images/p-cposter.webp" alt="Cartel de Corte & Co. en la calle" loading="lazy" width="900" height="599"><img src="images/p-cphone.webp" alt="Story de Corte & Co. en un móvil" loading="lazy" width="599" height="900"><img src="images/p-ccard.webp" alt="Carta de precios de Corte & Co." loading="lazy" width="424" height="877"></span><span class="meta"><strong>Corte &amp; Co.</strong><small>Barbería · Marca + web + redes</small></span></a>
+    <a class="tile t-volteo" href="https://landrytalbotpro.github.io/volteo/"><img src="images/p-volteo.webp" alt="Web de VOLTÉO en el móvil" loading="lazy" width="600" height="800"><span class="meta"><strong>VOLTÉO</strong><small>Coaching premium · Dirección visual + web</small></span></a>
     <a class="tile t-braza" href="https://landrytalbotpro.github.io/braza-restaurante/"><img src="images/p-braza.webp" alt="Web del restaurante Braza" loading="lazy" width="900" height="507"><span class="meta"><strong>Braza</strong><small>Restaurante · Web</small></span></a>
     <a class="tile t-elan" href="https://landrytalbotpro.github.io/Elan-Studio/"><img src="images/p-elan.webp" alt="Web de Élan Studio" loading="lazy" width="900" height="507"><span class="meta"><strong>Élan Studio</strong><small>Belleza · Web</small></span></a>
     <a class="tile t-sourire" href="https://landrytalbotpro.github.io/Sourire-paris/"><img src="images/p-sourire.webp" alt="Web de Sourire Paris" loading="lazy" width="900" height="507"><span class="meta"><strong>Sourire Paris</strong><small>Clínica dental · Web</small></span></a>
-    <a class="tile t-vantia" href="https://landrytalbotpro.github.io/vantia-ia/"><img src="images/p-vantia.webp" alt="Web de Vantia IA" loading="lazy" width="900" height="507"><span class="meta"><strong>Vantia IA</strong><small>Inmobiliarias · Web + IA</small></span></a>
-    <a class="tile t-forge trio" href="https://landrytalbotpro.github.io/forge-gym/"><span class="trio-in"><img src="images/p-fflyer.webp" alt="Folleto de planes de Forge" loading="lazy" width="675" height="900"><img src="images/p-fphone.webp" alt="Story de Forge en un móvil" loading="lazy" width="599" height="900"><img src="images/p-fposter.webp" alt="Cartel de Forge en la calle" loading="lazy" width="900" height="599"></span><span class="meta"><strong>Forge</strong><small>Gimnasio · Marca + web + redes</small></span></a>
+    <a class="tile t-vantia" href="https://landrytalbotpro.github.io/vantia-ia/"><img src="images/p-vantia.webp" alt="Web de Vantia IA" loading="lazy" width="900" height="507"><span class="meta"><strong>Vantia IA</strong><small>Inmobiliarias · Web + IA</small></span></a>
+    <a class="tile t-forge trio" href="https://landrytalbotpro.github.io/forge-gym/"><span class="trio-in"><img src="images/p-fflyer.webp" alt="Folleto de planes de Forge" loading="lazy" width="675" height="900"><img src="images/p-fphone.webp" alt="Story de Forge en un móvil" loading="lazy" width="599" height="900"><img src="images/p-fposter.webp" alt="Cartel de Forge en la calle" loading="lazy" width="900" height="599"></span><span class="meta"><strong>Forge</strong><small>Gimnasio · Marca + web + redes</small></span></a>
   </div>
 </section>
 
 <section class="sec" id="oferta">
-  <h2 class="sec-t">Precio cerrado antes de empezar. <mark class="hl">Sin letra pequeña.</mark></h2>
+  <h2 class="sec-t"><span class="ln">Precio cerrado antes de empezar.</span><span class="ln">Sin letra pequeña.</span></h2>
   <div class="prices">
     <article class="pk">
       <h3>Web</h3>
-      <p class="pr" data-count="550">550 €</p>
-      <p class="pk-d">Una página a medida para empezar a recibir clientes.</p>
-      <ul><li>Diseño a medida, perfecta en móvil</li><li>Servicios, precios y fotos</li><li>Contacto por WhatsApp y Google Maps</li></ul>
-      <p class="when">Lista en 1 semana</p>
+      <p class="pr" data-count="550">550 €</p>
+      <p class="pk-d">Una página a medida para empezar a recibir clientes.</p>
+      <ul><li>Diseño a medida, perfecta en móvil</li><li>Servicios, precios y fotos</li><li>Contacto por WhatsApp y Google Maps</li></ul>
+      <p class="when">Lista en 1 semana</p>
       <a class="btn ghost" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20Web%20de%20550%20%E2%82%AC">Quiero esta</a>
     </article>
     <article class="pk star">
-      <span class="badge">El más elegido</span>
-      <h3>Tu marca en 10 días</h3>
-      <p class="pr" data-count="1200">1.200 €</p>
-      <p class="pk-d">Marca, web y redes listas a la vez, con la misma identidad.</p>
-      <ul><li>Logo e identidad visual</li><li>Web de 4 a 5 páginas con textos</li><li>6 plantillas para redes: posts, stories y portada</li><li>Preparada para Google: ficha y SEO básico</li><li>2 rondas de cambios en logo y en web</li></ul>
-      <p class="when">Lista en 10 días</p>
-      <a class="btn grad" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20%22Tu%20marca%20en%2010%20d%C3%ADas%22">Quiero mi marca</a>
+      <span class="badge">El más elegido</span>
+      <h3>Tu marca en 10 días</h3>
+      <p class="pr" data-count="1200">1.200 €</p>
+      <p class="pk-d">Marca, web y redes listas a la vez, con la misma identidad.</p>
+      <ul><li>Logo e identidad visual</li><li>Web de 4 a 5 páginas con textos</li><li>6 plantillas para redes: posts, stories y portada</li><li>Preparada para Google: ficha y SEO básico</li><li>2 rondas de cambios en logo y en web</li></ul>
+      <p class="when">Lista en 10 días</p>
+      <a class="btn grad" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20%22Tu%20marca%20en%2010%20d%C3%ADas%22">Quiero mi marca</a>
     </article>
     <article class="pk">
       <h3>Premium</h3>
-      <p class="pr" data-count="2300">2.300 €</p>
-      <p class="pk-d">Todo lo anterior, más contenido y acompañamiento.</p>
-      <ul><li>Branding completo</li><li>Contenido de lanzamiento para redes</li><li>Herramientas de IA para tu negocio</li><li>Acompañamiento los primeros meses</li></ul>
-      <p class="when">Lista en 4 semanas</p>
+      <p class="pr" data-count="2300">2.300 €</p>
+      <p class="pk-d">Todo lo anterior, más contenido y acompañamiento.</p>
+      <ul><li>Branding completo</li><li>Contenido de lanzamiento para redes</li><li>Herramientas de IA para tu negocio</li><li>Acompañamiento los primeros meses</li></ul>
+      <p class="when">Lista en 4 semanas</p>
       <a class="btn ghost" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20Premium">Quiero esta</a>
     </article>
   </div>
-  <p class="extra">Acompañamiento mensual opcional: 45 €/mes, sin permanencia. Alojamiento incluido, solo pagas el dominio (unos 15 € al año, a tu nombre).</p>
+  <p class="extra">Acompañamiento mensual opcional: 45 €/mes, sin permanencia. Alojamiento incluido, solo pagas el dominio (unos 15 € al año, a tu nombre).</p>
 </section>
 
 <section class="sec" id="faq">
-  <h2 class="sec-t">Antes de escribirnos</h2>
-  <div class="faq"><details><summary>¿Tengo que contratar a alguien más para el logo o las redes?</summary><p>No. Marca, web y contenido salen del mismo estudio, así que todo encaja desde el principio.</p></details><details><summary>¿La web es realmente mía?</summary><p>Sí. No alquilas nada ni pagas una suscripción obligatoria.</p></details><details><summary>¿Puedo publicar en redes yo mismo después?</summary><p>Sí. Te dejamos plantillas editables con tu marca para que publiques sin depender de nadie.</p></details><details><summary>¿Y si quiero cambiar cosas?</summary><p>El pack incluye 2 rondas de cambios en el logo y 2 en la web. Si necesitas más, te decimos el precio antes de tocar nada.</p></details><details><summary>¿Trabajáis en español y francés?</summary><p>Sí, en los dos idiomas y en los dos mercados.</p></details></div>
+  <h2 class="sec-t">Antes de escribirnos</h2>
+  <div class="faq"><details><summary>¿Tengo que contratar a alguien más para el logo o las redes?</summary><p>No. Marca, web y contenido salen del mismo estudio, así que todo encaja desde el principio.</p></details><details><summary>¿La web es realmente mía?</summary><p>Sí. No alquilas nada ni pagas una suscripción obligatoria.</p></details><details><summary>¿Puedo publicar en redes yo mismo después?</summary><p>Sí. Te dejamos plantillas editables con tu marca para que publiques sin depender de nadie.</p></details><details><summary>¿Y si quiero cambiar cosas?</summary><p>El pack incluye 2 rondas de cambios en el logo y 2 en la web. Si necesitas más, te decimos el precio antes de tocar nada.</p></details><details><summary>¿Trabajáis en español y francés?</summary><p>Sí, en los dos idiomas y en los dos mercados.</p></details></div>
 </section>
 
 <section class="offer" id="contacto">
-  <h2>¿Empezamos tu marca?</h2>
-  <p>Cuéntanos qué haces y qué necesitas. Te respondemos en menos de 24 horas.</p>
-  <div class="contact-grid"><a class="btn grad" href="https://wa.me/34675153535">Hablar por WhatsApp</a></div>
-  <p class="meta-line">landrytalbotpro@gmail.com · +34 675 15 35 35 · Asturias / Asturies · Francia</p>
+  <h2>¿Empezamos tu marca?</h2>
+  <p>Cuéntanos qué haces y qué necesitas. Te respondemos en menos de 24 horas.</p>
+  <div class="contact-grid"><a class="btn grad" href="https://wa.me/34675153535">Hablar por WhatsApp</a></div>
+  <p class="meta-line">landrytalbotpro@gmail.com · +34&nbsp;675&nbsp;15&nbsp;35&nbsp;35 · Asturias&nbsp;/&nbsp;Asturies&nbsp;·&nbsp;Francia</p>
 </section>
 </main>
 
-<footer class="note"><span>© 2026 Nuvora Studio · Asturias / Asturies · Francia</span><span>Salitre es una marca inventada para el ejemplo · <a href="privacidad.html">Privacidad</a></span></footer>
+<footer class="note"><span>©&nbsp;2026 Nuvora&nbsp;Studio · Asturias&nbsp;/&nbsp;Asturies&nbsp;·&nbsp;Francia</span><span>Salitre es una marca inventada para el ejemplo · <a href="privacidad.html">Privacidad</a></span></footer>
 
-<a class="wa-sticky" href="https://wa.me/34675153535">💬 Hablemos por WhatsApp</a>
+<a class="wa-sticky" href="https://wa.me/34675153535">💬 Hablemos por WhatsApp</a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -507,7 +525,7 @@ mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
     .to('.bezel', {borderWidth:2, duration:.9}, '<')
     .to('.l-web', {opacity:0, duration:.4}, '<')
     .to('.l-post', {opacity:1, duration:.5}, '<.35')
-    .from('.l-post .pic p', {y:24, opacity:0, duration:.5}, '<.2')
+    .from('.l-post .pic .txt', {y:24, opacity:0, duration:.5}, '<.2')
     .to({}, {duration:.4});
 
   // Servicios: filas que entran y línea que se dibuja
