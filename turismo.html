@@ -6,6 +6,7 @@
 <title>Webs para casas rurales en Asturias — Nuvora Studio</title>
 <meta name="description" content="Web y ficha de Google para tu casa rural, en español y francés, con reserva directa por WhatsApp. Sin comisiones. Lista en una semana.">
 <meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://nuvorastudio.es/turismo.html">
 <link rel="alternate" hreflang="es" href="https://nuvorastudio.es/turismo.html">
 <link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/tourisme.html">
 <meta property="og:type" content="website">
@@ -22,16 +23,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2VKRWEJ8G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  var nuvoraInterne = false; try { var m = location.search.match(/[?&]interne=(0|1)/); if (m) localStorage.setItem('nuvora_interne', m[1]); nuvoraInterne = localStorage.getItem('nuvora_interne') === '1'; } catch (e) {}
-  gtag('config', 'G-V2VKRWEJ8G', nuvoraInterne ? { traffic_type: 'internal' } : {});
-  document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="wa.me"]'); if (a) gtag('event', 'clic_whatsapp', { page_path: location.pathname, link_text: (a.textContent || '').trim().slice(0, 60) }); });
-</script>
+<!-- Cloudflare Web Analytics (sans cookies). Décommenter et remplacer TOKEN_CLOUDFLARE par le token. -->
+<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TOKEN_CLOUDFLARE"}'></script> -->
 <style>
 /* Landing turismo (fuera del menú): hero → 3 opciones → demo → 3 razones → FAQ → contacto. Misma identidad que la home. */
 :root{
@@ -190,7 +183,7 @@ h1,h2,h3{text-wrap:balance}
 </section>
 </main>
 
-<footer class="note"><span>© 2026 Nuvora Studio · Asturias / Asturies</span><span><a href="./">Nuvora Studio</a> · <a href="privacidad.html">Privacidad</a></span></footer>
+<footer class="note"><span>© 2026 Nuvora Studio · Asturias / Asturies</span><span><a href="./">Nuvora Studio</a> · <a href="privacidad.html">Privacidad</a> · <a href="aviso-legal.html">Aviso legal</a></span></footer>
 <a class="wa-sticky" href="https://wa.me/34675153535">💬 Escríbenos por WhatsApp</a>
 </body>
 </html>
