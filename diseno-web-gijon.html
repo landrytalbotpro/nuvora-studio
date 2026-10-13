@@ -13,6 +13,7 @@
 <meta property="og:image" content="https://nuvorastudio.es/images/og-es.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nuvora Studio: tu marca, tu web y tus redes">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Diseño web en Gijón y Asturias — Nuvora Studio">
@@ -21,10 +22,11 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Instrument+Sans:wght@400;600&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,182 +36,518 @@
   "image": "https://nuvorastudio.es/images/og-es.jpg",
   "description": "Diseño web en Gijón para pequeños negocios: restaurantes, barberías, gimnasios y más. Web desde 550 €, precio cerrado y lista en una semana.",
   "telephone": "+34675153535",
+  "email": "nuvorastudio.art@gmail.com",
   "address": {"@type": "PostalAddress", "addressLocality": "Gijón", "addressRegion": "Asturias", "addressCountry": "ES"},
   "areaServed": [
     {"@type": "City", "name": "Gijón"},
     {"@type": "City", "name": "Oviedo"},
     {"@type": "City", "name": "Avilés"},
-    {"@type": "AdministrativeArea", "name": "Asturias"}
+    {"@type": "AdministrativeArea", "name": "Asturias"},
+    {"@type": "Country", "name": "France"}
   ],
   "inLanguage": "es",
   "makesOffer": [
     {"@type": "Offer", "name": "Web", "price": "550", "priceCurrency": "EUR"},
-    {"@type": "Offer", "name": "Tu marca en 10 días", "price": "1200", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Tu marca en 10 días", "price": "1200", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Premium", "price": "2300", "priceCurrency": "EUR"}
   ]
 }
 </script>
+
+<!-- Cloudflare Web Analytics (sans cookies). Décommenter et remplacer TOKEN_CLOUDFLARE par le token. -->
+<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "TOKEN_CLOUDFLARE"}'></script> -->
 <style>
-/* Landing turismo (fuera del menú): hero → 3 opciones → demo → 3 razones → FAQ → contacto. Misma identidad que la home. */
+
+/* Layout: typographic hero → scroll build (marca → web → post) → servicios → bento de proyectos que encaja con scroll → precios → FAQ → contacto */
 :root{
-  --bg:#EEE8DA; --paper:#FAF7F0; --ink:#000000; --muted:#5E5A52; --accent:#2F3CFF; --rural:#2F4A35; --wheat:#E8C77A;
-  --display:"Unbounded","Arial Black",system-ui,sans-serif;
-  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --bg:#EEE8DA; --paper:#FAF7F0; --ink:#000000; --muted:#5E5A52; --accent:#6C63FF; --on-accent:#FFFFFF; --hl:rgba(108,99,255,.26); --blue:#2F6BFF; --accent-on-ink:#8F88FF;
+  --f-green:#0E0E0E; --f-wheat:#FF5A1F; --f-cream:#F4F1EA;
+  --display:"Unbounded", "Arial Black", system-ui, sans-serif;
+  --body:"Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --client:"Unbounded", "Arial Black", sans-serif;
   --gut:clamp(18px,4vw,48px);
+  box-sizing:border-box;
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){ --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397; --accent:#7C85FF; --rural:#9DB89F; color-scheme:dark; }
+  :root:not([data-theme="light"]){ --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397; --accent:#8F88FF; --on-accent:#000000; --hl:rgba(143,136,255,.32); --blue:#5B8CFF; --accent-on-ink:#6C63FF; color-scheme:dark; }
 }
-:root[data-theme="dark"]{ --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397; --accent:#7C85FF; --rural:#9DB89F; color-scheme:dark; }
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+:root[data-theme="dark"]{ --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397; --accent:#8F88FF; --on-accent:#000000; --hl:rgba(143,136,255,.32); --blue:#5B8CFF; --accent-on-ink:#6C63FF; color-scheme:dark; }
+*,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 h1,h2,h3{text-wrap:balance}
-.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(env(safe-area-inset-top,0px) + 16px) var(--gut) 16px;background:var(--bg)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  padding:calc(env(safe-area-inset-top,0px) + 18px) var(--gut) 18px;background:var(--bg);color:var(--ink);border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
 .wordmark{font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:-.01em;text-decoration:none;transform:skewX(-8deg);display:inline-block}
-.nav-r{display:flex;gap:18px;align-items:center;font-size:.95rem}
-.nav-r .lang{opacity:.6;text-decoration:none}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .2s}
+.nav-r{display:flex;gap:22px;font-size:.95rem}
+.nav-r a{text-decoration:none}
+.nav-r .lang{opacity:.6}
+
+/* hero */
+.hero{min-height:88svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--gut) 48px}
+.kinetic{font-family:var(--display);font-weight:800;font-size:clamp(3.2rem,13vw,11.5rem);line-height:.88;letter-spacing:-.045em;margin:0}
+.kinetic .line{display:block;overflow:hidden;padding-bottom:.04em}
+.kinetic .line span{display:inline-block}
+.kinetic .line:nth-child(2){padding-left:12vw}
+.kinetic .line:nth-child(3){padding-left:4vw}
+.hero-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-top:40px}
+.hero-foot p{margin:0;max-width:30ch;font-size:1.2rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;padding:16px 26px;border-radius:999px;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn.sm{padding:10px 18px;font-size:.92rem}
-.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
-.eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rural)}
-.hero{padding:8vh var(--gut) 10vh}
-.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8.5vw,7.5rem);line-height:.92;letter-spacing:-.045em;margin:18px 0 0;max-width:13ch}
-.hero h1 em{font-style:normal;color:var(--rural)}
-.hero p{max-width:46ch;font-size:1.2rem;color:var(--muted);margin:32px 0}
-.sec{padding:10vh var(--gut) 4vh}
-.sec-t{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.6rem);letter-spacing:-.035em;line-height:1;margin:10px 0 18px;max-width:18ch}
-.lead{max-width:56ch;color:var(--muted);margin:0 0 5vh}
+.cue{font-size:.95rem;color:var(--muted)}
+
+/* build */
+.build{position:relative;height:100svh;display:grid;grid-template-columns:minmax(260px,1fr) 1.3fr;align-items:center;gap:4vw;padding:80px var(--gut) 40px;overflow:hidden}
+.caps h2{font-family:var(--display);font-weight:500;font-size:clamp(1rem,1.4vw,1.15rem);margin:0 0 28px;color:var(--muted)}
+.cap{margin:0 0 22px;opacity:.22;transition:opacity .4s}
+.cap.is-on{opacity:1}
+.cap strong{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.4vw,3rem);letter-spacing:-.03em;line-height:1}
+.cap span{display:block;max-width:34ch;color:var(--muted);margin-top:6px}
+.steps{display:flex;gap:6px;margin-top:30px}
+.steps i{flex:1;height:4px;background:var(--ink);opacity:.15;border-radius:2px;transition:opacity .4s}
+.steps i.is-on{opacity:1}
+.stage{position:relative;height:100%;display:grid;place-items:center}
+.frame{position:relative;width:260px;height:520px;border-radius:38px;overflow:hidden}
+.bezel{position:absolute;inset:0;border:10px solid var(--ink);border-radius:inherit;opacity:0;z-index:5;pointer-events:none}
+.layer{position:absolute;inset:0}
+.l-logo{display:grid;place-items:center;align-content:center;gap:10px;color:var(--f-green);z-index:4}
+.l-logo svg{width:150px;height:150px;overflow:visible}
+.l-logo svg path{fill:none;stroke:currentColor;stroke-width:7;stroke-linejoin:miter;stroke-linecap:square}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .l-logo{color:var(--f-wheat)} }
+:root[data-theme="dark"] .l-logo{color:var(--f-wheat)}
+.l-logo .fname{font-family:var(--client);font-weight:800;font-size:1.9rem;letter-spacing:-.03em;opacity:0}
+.l-web{background:#0E0E0E;color:#F4F1EA;opacity:0;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+.l-web .bar{display:flex;justify-content:space-between;align-items:center;padding:30px 16px 10px;font-family:var(--client);font-weight:800;font-size:.95rem;letter-spacing:-.02em}
+.l-web .bar i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#FF5A1F;margin-right:6px;vertical-align:1px}
+.l-web .bar b{width:16px;height:2px;background:currentColor;box-shadow:0 5px 0 currentColor}
+.l-web .hero{position:relative;flex:1;min-height:0;margin:0 8px;border-radius:12px;overflow:hidden;background:#3a3436}
+.l-web .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.l-web .hero .ov{position:absolute;left:0;right:0;bottom:0;padding:12px;background:rgba(14,14,14,.72)}
+.l-web .rate{font-size:.62rem;font-weight:600;color:#FFC24B;margin-bottom:4px}
+.l-web h3{font-family:var(--client);font-weight:800;font-size:1.12rem;line-height:1.02;letter-spacing:-.03em;margin:0}
+.l-web .row{display:flex;gap:6px;padding:10px 12px 4px;flex-wrap:wrap}
+.l-web .chip{font-size:.62rem;font-weight:600;padding:5px 8px;border-radius:999px;border:1px solid rgba(244,241,234,.35)}
+.l-web .cta{margin:6px 12px 16px;text-align:center;background:#FF5A1F;color:#0E0E0E;font-size:.8rem;font-weight:700;padding:11px 14px;border-radius:999px}
+.l-post{background:#FFFFFF;color:#0E0E0E;opacity:0;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+.l-post .head{display:flex;align-items:center;gap:9px;padding:10px 12px}
+.l-post .av{width:30px;height:30px;border-radius:50%;background:#FF5A1F;padding:2px;box-shadow:0 0 0 2px #fff,0 0 0 3.5px #FF5A1F;display:grid;place-items:center;flex:none}
+.l-post .av svg{width:20px;height:20px}
+.l-post .who{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.l-post .who b{font-size:.8rem}
+.l-post .who span{font-size:.68rem;color:#6B6B6B}
+.l-post .more{margin-left:auto;font-weight:700;letter-spacing:1px}
+.l-post .pic{position:relative;flex:1;min-height:0;background:#3a3436;overflow:hidden}
+.l-post .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.l-post .pic svg{position:absolute;inset:0;width:100%;height:100%}
+.l-post .pic .tag{position:absolute;top:10px;left:10px;background:#FF5A1F;color:#0E0E0E;font-family:var(--client);font-size:.58rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:4px}
+.l-post .pic .txt{position:absolute;left:0;right:0;bottom:0;padding:10px 12px 12px;background:#0E0E0E;color:#F4F1EA}
+
+.l-post .pic p{font-family:var(--client);font-weight:800;font-size:clamp(1rem,1.8vw,1.25rem);line-height:1;letter-spacing:-.03em;margin:0 0 8px}
+.l-post .pic .pill{display:inline-block;background:#FF5A1F;color:#0E0E0E;font-size:.66rem;font-weight:700;padding:5px 9px;border-radius:999px}
+.l-post .acts{display:flex;gap:12px;padding:9px 12px 4px;align-items:center}
+.l-post .acts svg{width:20px;height:20px;fill:none;stroke:#0E0E0E;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.l-post .acts .heart{fill:#ED4956;stroke:#ED4956}
+.l-post .acts .save{margin-left:auto}
+.l-post .likes{padding:0 12px;font-size:.74rem;font-weight:700}
+.l-post .cap{padding:2px 12px 10px;font-size:.72rem;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* sections */
+.sec{padding:14vh var(--gut) 6vh}
+.sec-t{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.8rem);letter-spacing:-.035em;line-height:1;margin:0 0 6vh;max-width:18ch}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 40px;margin:0 0 5vh}
+.sec-head .sec-t{margin:0}
+.sec-head p{margin:0;max-width:36ch;color:var(--muted)}
+.svc{list-style:none;margin:0;padding:0}
+.svc li{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:baseline;padding:26px 0;border-top:2px solid var(--ink)}
+.svc li:last-child{border-bottom:2px solid var(--ink)}
+.svc strong{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.6vw,2.2rem);letter-spacing:-.02em}
+.svc span{color:var(--muted);max-width:42ch}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(110px,13vw,200px);gap:clamp(10px,1.2vw,16px)}
+.tile{position:relative;display:block;overflow:hidden;border-radius:18px;background:var(--paper);text-decoration:none;color:#F4EFE4;isolation:isolate}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.tile .meta{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px;padding:14px 18px;background:rgba(10,10,10,.92)}
+.tile strong{font-family:var(--display);font-weight:800;font-size:clamp(1.05rem,1.7vw,1.6rem);letter-spacing:-.03em;line-height:1}
+.tile small{font-size:.85rem;opacity:.8}
+.tile:hover img,.tile:focus-visible img{transform:scale(1.04)}
+.trio .trio-in{position:absolute;inset:0;display:grid;grid-template-columns:1.5fr .9fr .7fr;gap:3px;background:var(--paper)}
+.trio .trio-in img{position:relative;inset:auto;width:100%;height:100%;object-fit:cover}
+.trio .trio-in img:first-child{object-position:48% 40%}
+.trio .trio-in img:nth-child(2){object-position:25% 50%}
+.trio .trio-in img:nth-child(3){object-position:50% 50%}
+.t-forge .trio-in{grid-template-columns:1fr .9fr 1.3fr}
+.t-forge .trio-in img:first-child{object-position:50% 55%}
+.t-forge .trio-in img:nth-child(3){object-position:48% 40%}
+.t-corte{grid-column:1/5;grid-row:1/3}
+.t-volteo{grid-column:5/7;grid-row:1/3}
+.t-braza{grid-column:1/3;grid-row:3/5}
+.t-elan{grid-column:3/5;grid-row:3/5}
+.t-forge{grid-column:3/7;grid-row:5/7}
+.t-sourire{grid-column:5/7;grid-row:3/5}
+.t-vantia{grid-column:1/3;grid-row:5/7}
+.t-corte strong{font-size:clamp(1.4rem,3vw,2.6rem)}
+
+/* prices */
 .prices{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px;align-items:stretch}
-.pk{display:flex;flex-direction:column;padding:28px 24px;border:2px solid var(--ink);border-radius:4px;min-width:0}
+.pk{display:flex;flex-direction:column;padding:30px 26px;border:2px solid var(--ink);border-radius:4px}
 .pk.star{background:var(--ink);color:var(--bg);border-radius:28px 4px 28px 4px;transform:translateY(-14px)}
-.pk .tag{align-self:flex-start;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--wheat);color:#000;padding:5px 10px;border-radius:999px;margin-bottom:12px}
-.pk h3{font-family:var(--display);font-weight:500;font-size:1.15rem;margin:0}
-.pk .pr{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,4.4vw,3.4rem);letter-spacing:-.04em;margin:12px 0 4px;font-variant-numeric:tabular-nums}
-.pk-d{margin:0 0 16px;opacity:.8}
-.pk ul{margin:0 0 20px;padding-left:1.1em;flex:1}
+.pk h3{font-family:var(--display);font-weight:500;font-size:1.2rem;margin:0}
+.pk .pr{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,4.4vw,3.6rem);letter-spacing:-.04em;margin:14px 0 6px;font-variant-numeric:tabular-nums}
+.pk-d{margin:0 0 18px;opacity:.8}
+.pk ul{margin:0 0 22px;padding-left:1.1em;flex:1}
 .pk li{margin-bottom:6px}
-.when{font-weight:600;margin:0 0 16px}
+.when{font-weight:600;margin:0 0 18px}
+.pk.star .when{color:var(--accent)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .pk.star .when{color:var(--f-green)} }
+:root[data-theme="dark"] .pk.star .when{color:var(--f-green)}
 .pk .btn{align-self:flex-start}
 .pk.star .btn{background:var(--bg);color:var(--ink)}
-.notes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
-.notes p{margin:0;padding:18px 20px;background:var(--paper);border-radius:12px;color:var(--muted)}
-.notes strong{color:var(--ink)}
-.demo{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(20px,4vw,56px);align-items:center}
-.demo-img{display:block;border-radius:18px;overflow:hidden;background:var(--paper);aspect-ratio:1000/604;max-width:100%}
-.demo-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
-.demo-img:hover img{transform:scale(1.03)}
-.demo h3{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.03em;margin:8px 0 10px}
-.demo p{color:var(--muted);margin:0 0 18px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
-.chips li{font-size:.85rem;font-weight:600;border:1.5px solid var(--ink);padding:6px 12px;border-radius:999px}
-.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:w}
-.why li{border-top:2px solid var(--ink);padding-top:18px;counter-increment:w}
-.why li::before{content:counter(w,decimal-leading-zero);font-family:var(--display);font-weight:800;color:var(--rural);font-size:.95rem}
-.why strong{display:block;font-family:var(--display);font-weight:500;font-size:1.3rem;letter-spacing:-.02em;margin:10px 0 8px}
-.why span{color:var(--muted)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.extra{margin:36px 0 0;max-width:60ch;color:var(--muted)}
+
 .faq details{border-top:2px solid var(--ink);padding:20px 0}
 .faq details:last-child{border-bottom:2px solid var(--ink)}
-.faq summary{cursor:pointer;font-weight:600;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";font-family:var(--display);transition:transform .25s}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq p{margin:12px 0 0;color:var(--muted);max-width:60ch}
-.offer{margin-top:10vh;padding:14vh var(--gut);background:var(--ink);color:var(--bg)}
-.offer h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,7vw,5.5rem);letter-spacing:-.04em;line-height:.95;margin:0 0 24px;max-width:12ch}
-.offer p{max-width:46ch;font-size:1.2rem;opacity:.75;margin:0 0 32px}
+
+.offer{padding:16vh var(--gut);background:var(--ink);color:var(--bg)}
+.offer h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,7vw,6rem);letter-spacing:-.04em;line-height:.95;margin:0 0 28px;max-width:12ch}
+@media (max-width:820px){.offer{min-height:88svh;display:flex;flex-direction:column;justify-content:center;padding:10vh var(--gut) 12vh}.offer h2{font-size:10.4vw;line-height:.95;margin-bottom:32px;max-width:none}.offer p{font-size:1.15rem}.offer .btn{padding:18px 28px;font-size:1.05rem}}
+.offer p{max-width:46ch;font-size:1.2rem;opacity:.75;margin:0 0 36px}
 .offer .btn{background:var(--bg);color:var(--ink)}
 .note{padding:28px var(--gut);font-size:.9rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+@media (max-width:820px){
+  .svc li{grid-template-columns:1fr;gap:6px}
+  .prices{grid-template-columns:1fr}
+  .pk.star{transform:none}
+  .nav-r a:not(.lang){display:none}
+  .build{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:10px;padding-top:76px}
+  .caps h2{display:none}
+  .cap{display:none;margin:0}
+  .cap.is-on{display:block}
+  .cap span{font-size:.95rem}
+  .steps{margin-top:14px}
+  .kinetic .line:nth-child(2){padding-left:8vw}
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}
+  .tile .meta{padding:10px 12px}
+  .trio .trio-in{grid-template-columns:1.2fr 1fr}
+  .trio .trio-in img:nth-child(3){display:none}
+  .bento .tile{grid-column:auto;grid-row:auto}
+  .bento .t-corte{grid-column:1/3;grid-row:span 2}
+  .bento .t-volteo{grid-row:span 2}
+  .bento .t-forge{grid-column:1/3;grid-row:span 2}
+}
+
+/* reduced motion / no JS */
+.static .build{height:auto;display:block}
+.static .stage{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:30px}
+.static .frame{width:auto;height:auto;display:contents}
+.static .bezel{display:none}
+.static .layer{position:relative;opacity:1 !important;width:240px;height:420px;border-radius:20px;overflow:hidden;border:2px solid var(--ink)}
+.static .l-logo .fname{opacity:1}
+.static .cap{opacity:1;display:block}
+.static .steps{display:none}
+
+html{scroll-padding-top:0}
+.shop{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;padding:28px 28px;border:2px solid var(--blue);border-radius:20px}
+.shop>div{min-width:0;max-width:60ch}
+.shop h3{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,2.4vw,1.8rem);letter-spacing:-.03em;margin:0 0 8px}
+.shop p{margin:0;color:var(--muted)} .shop p strong{color:var(--ink);font-weight:600}
+p,li,small,.cap,.pk-d,.extra,.lead{text-wrap:pretty}
+.sec-t{text-wrap:balance;max-width:22ch}
+.ln{display:block}
+@media (max-width:400px){.sec-t{font-size:1.6rem}}
+/* --- v3: diseño anterior + detalles en morado y azul, sin degradados --- */
+.kinetic .dot{color:var(--accent)}
+.kinetic .line:nth-child(2) .dot{color:var(--blue)}
+mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
+.btn.grad,.wa-sticky{background:#5A50F0;color:#fff}
+.btn.grad:hover{transform:translateY(-2px);background:var(--blue)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.hero-badges li{font-size:.9rem;font-weight:600;padding:7px 14px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.hero-badges li b{color:#4F46E5}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .hero-badges li b{color:var(--accent)} }
+:root[data-theme="dark"] .hero-badges li b{color:var(--accent)}
+.svc li{position:relative;isolation:isolate;transition:padding .35s}
+.svc li::before{content:"";position:absolute;left:0;top:-2px;height:2px;width:0;background:var(--accent);transition:width .45s}
+.svc li:hover{padding-left:16px}
+.svc li:hover::before{width:100%}
+.svc strong em{font-style:normal;color:var(--accent)}
+.pk.star{position:relative;border-color:var(--accent)}
+.pk .badge{position:absolute;top:-14px;left:24px;background:#2A5BDB;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.pk.star .pr{color:var(--accent-on-ink)}
+.pk.star .when{color:var(--accent)!important}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .pk.star .when{color:#4338CA!important} }
+:root[data-theme="dark"] .pk.star .when{color:#4338CA!important}
+.brand{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,64px);align-items:start}
+.brand ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.brand li{display:flex;gap:12px;align-items:baseline;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.brand li:last-child{border-bottom:1px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+.brand li b{font-family:var(--display);font-weight:500;min-width:0}
+.brand li span{color:var(--muted);margin-left:auto;text-align:right;font-size:.95rem}
+.board{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto auto;gap:10px}
+.board figure{margin:0;border-radius:14px;overflow:hidden;background:var(--paper);position:relative}
+.board img{display:block;width:100%;height:100%;object-fit:cover}
+.board .b-logo{grid-row:span 2;background:#F2F0EB}
+.board .b-logo img{object-fit:contain}
+.board .sw{display:flex;height:100%;min-height:90px}
+.board .sw i{flex:1}
+.board figcaption{position:absolute;left:10px;bottom:10px;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.65);color:#F4EFE4;padding:4px 8px;border-radius:999px}
+.ia{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ia article{position:relative;padding:28px 24px 26px;border-radius:20px;background:var(--paper);overflow:hidden;min-width:0}
+.ia article::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--accent)}
+.ia article:nth-child(2)::after{background:var(--blue)}
+.ia h3{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.025em;line-height:1.05;margin:0 0 10px}
+.ia p{margin:0;color:var(--muted)}
+.ia small{display:block;margin-top:14px;font-weight:600;color:#4F46E5}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .ia small{color:var(--accent)} }
+:root[data-theme="dark"] .ia small{color:var(--accent)}
+.ia-note{margin:24px 0 0;max-width:62ch;color:var(--muted)}
+@media (max-width:820px){
+  .brand,.ia{grid-template-columns:1fr}
+  .board{grid-template-columns:1fr 1fr}
+  .board .b-logo{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10}
+  .brand li{flex-wrap:wrap}
+  .brand li span{margin-left:0;text-align:left;width:100%}
+}
+@media (prefers-reduced-motion: reduce){
+  .svc li::before{transition:none}
+}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--bg);padding:10px 16px;z-index:50}
+.skip:focus{left:12px;top:12px}
+.contact-grid{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.offer .meta-line{margin-top:28px;font-size:1rem;opacity:.7}
+.offer .meta-line a{color:inherit}
 .wa-sticky{display:none}
 @media (max-width:820px){
-  .prices,.notes,.demo,.why{grid-template-columns:1fr}
-  .pk.star{transform:none}
-  .nav .btn{display:none}
-  .wa-sticky{display:flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;justify-content:center;background:var(--ink);color:var(--bg);font-weight:600;text-decoration:none;padding:15px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .wa-sticky{display:flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;justify-content:center;align-items:center;gap:8px;font-weight:600;text-decoration:none;padding:15px 20px;border-radius:999px;transition:transform .3s,opacity .3s}
+  .wa-sticky.is-hidden{transform:translateY(140%);opacity:0}
   .note{padding-bottom:96px}
 }
-@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .btn,.demo-img img{transition:none} }
 </style>
 </head>
 <body>
+<a class="skip" href="#servicios">Saltar al contenido</a>
+
 <nav class="nav" aria-label="Principal">
-  <a href="./" class="wordmark">NUVORA STUDIO</a>
-  <div class="nav-r"><a class="btn sm" href="https://wa.me/34675153535">Hablemos</a></div>
+  <a href="./" class="wordmark" aria-label="Nuvora Studio">NUVORA STUDIO</a>
+  <div class="nav-r"><a href="#servicios">Servicios</a><a href="#trabajos">Proyectos</a><a href="#oferta">Precios</a><a href="#contacto">Contacto</a><a class="lang" href="fr/" hreflang="fr" lang="fr" aria-label="Version française">FR</a></div>
 </nav>
 
 <main>
 <header class="hero">
-  <span class="eyebrow">Gijón · Oviedo · Avilés · toda Asturias</span>
-  <h1>Diseño web en Gijón <em>para pequeños negocios.</em></h1>
-  <p>Hacemos tu web, tu logo y tus redes con un solo equipo. Precio cerrado antes de empezar y la web lista en una semana. Trabajamos en español y en francés.</p>
-  <a class="btn" href="https://wa.me/34675153535">Cuéntanos de tu negocio</a>
+  <h1 class="kinetic" aria-label="Diseño web en Gijón y Asturias.">
+    <span class="line"><span>Diseño web</span></span>
+    <span class="line"><span>en Gijón<span class="dot">.</span></span></span>
+    <span class="line"><span>Asturias<span class="dot">.</span></span></span>
+  </h1>
+  <div class="hero-foot">
+    <p>Webs, logos y redes para pequeños negocios de Gijón, Oviedo, Avilés y toda Asturias. <mark class="hl">Un solo equipo</mark> y precio cerrado.</p>
+    <a class="btn grad" href="https://wa.me/34675153535">Hablemos por WhatsApp</a>
+  </div>
+  <ul class="hero-badges"><li>Web lista en <b>1 semana</b></li><li>Desde 550 €</li><li>Gijón y toda Asturias</li></ul>
+  <div class="cue" style="margin-top:28px">Baja y mira cómo se construye una marca</div>
 </header>
 
-<section class="sec" id="opciones">
-  <span class="eyebrow">Tres opciones</span>
-  <h2 class="sec-t">Elige y escríbenos.</h2>
-  <p class="lead">Mismo precio para todos y sin letra pequeña. Sabes lo que pagas antes de empezar.</p>
-  <div class="prices">
-    <article class="pk">
-      <h3>Web</h3><p class="pr">550 €</p><p class="pk-d">Una página a medida para empezar a recibir clientes.</p>
-      <ul><li>Diseño a medida, perfecta en móvil</li><li>Servicios, precios y fotos</li><li>Contacto por WhatsApp y Google Maps</li></ul><p class="when">Lista en 1 semana</p>
-      <a class="btn ghost" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20Web%20de%20550%20%E2%82%AC">Quiero esta</a>
-    </article>
-    <article class="pk star">
-      <span class="tag">El más elegido</span>
-      <h3>Tu marca en 10 días</h3><p class="pr">1.200 €</p><p class="pk-d">Marca, web y redes listas a la vez, con la misma identidad.</p>
-      <ul><li>Logo e identidad visual</li><li>Web de 4 a 5 páginas con textos</li><li>6 plantillas para redes: posts, stories y portada</li><li>Preparada para Google: ficha y SEO básico</li><li>2 rondas de cambios en logo y en web</li></ul><p class="when">Lista en 10 días</p>
-      <a class="btn" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20%22Tu%20marca%20en%2010%20d%C3%ADas%22">Quiero mi marca</a>
-    </article>
-    <article class="pk">
-      <h3>Premium</h3><p class="pr">2.300 €</p><p class="pk-d">Todo lo anterior, más contenido y acompañamiento.</p>
-      <ul><li>Branding completo</li><li>Contenido de lanzamiento para redes</li><li>Herramientas de IA para tu negocio</li><li>Acompañamiento los primeros meses</li></ul><p class="when">Lista en 4 semanas</p>
-      <a class="btn ghost" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20Premium">Quiero esta</a>
-    </article>
+<section class="build" aria-label="Cómo construimos una marca">
+  <div class="caps">
+    <h2>Ejemplo: Salitre, escuela de surf en Salinas</h2>
+    <p class="cap is-on"><strong>1. Tu marca</strong><span>Logo, colores y tipografías. La base de todo lo demás.</span></p>
+    <p class="cap"><strong>2. Tu web</strong><span>La misma identidad, convertida en una web rápida que funciona en el móvil.</span></p>
+    <p class="cap"><strong>3. Tus redes</strong><span>Plantillas para Instagram que se reconocen al primer vistazo.</span></p>
+    <div class="steps" aria-hidden="true"><i class="is-on"></i><i></i><i></i></div>
   </div>
-  <div class="notes">
-    <p><strong>Acompañamiento mensual opcional: 45 €/mes</strong>, sin permanencia.</p>
-    <p><strong>La web es tuya.</strong> El alojamiento está incluido y solo pagas el dominio (unos 15 € al año, a tu nombre).</p>
-    <p><strong>¿Quieres vender online?</strong> Hacemos también tiendas online desde 950 €.</p>
-  </div>
-</section>
-
-<section class="sec" id="demo">
-  <div class="demo">
-    <a class="demo-img" href="https://landrytalbotpro.github.io/braza-restaurante/"><img src="images/p-braza.webp" alt="Web de demostración del restaurante Braza" width="900" height="507" loading="lazy"></a>
-    <div>
-      <span class="eyebrow">Ejemplo · Restaurante</span>
-      <h3>Braza</h3>
-      <p>Un proyecto de demostración para ver cómo queda una web de hostelería: rápida en el móvil, con carta, fotos y contacto directo. También tenemos ejemplos para gimnasios y barberías.</p>
-      <ul class="chips"><li>Pensada para el móvil</li><li>Contacto por WhatsApp</li><li>Google Maps</li></ul>
-      <a class="btn ghost" href="https://landrytalbotpro.github.io/braza-restaurante/">Ver el ejemplo</a>
-      <p class="note-demo"><a href="./#trabajos">Ver todos los ejemplos</a></p>
+  <div class="stage" aria-hidden="true">
+    <div class="frame">
+      <div class="bezel"></div>
+      <div class="layer l-logo">
+        <svg viewBox="0 0 200 200">
+          <path class="draw" d="M100 30 A40 40 0 1 1 99.9 30"/>
+          <path class="draw" d="M24 135 Q43 115 62 135 T100 135 T138 135 T176 135"/>
+          <path class="draw" d="M24 165 Q43 145 62 165 T100 165 T138 165 T176 165"/>
+        </svg>
+        <div class="fname">salitre</div>
+      </div>
+      <div class="layer l-web">
+        <div class="bar"><span><i></i>salitre</span><b></b></div>
+        <div class="hero"><img src="images/s-web.webp" alt="" width="620" height="561"><div class="ov"><div class="rate">★★★★★ 4,9 · 320 reseñas</div><h3>Aprende a surfear en Salinas</h3></div></div>
+        <div class="row"><span class="chip">Iniciación 30 €</span><span class="chip">Material incluido</span></div>
+        <span class="cta">Reservar clase</span>
+      </div>
+      <div class="layer l-post">
+        <div class="head"><span class="av"><svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="7" fill="none" stroke="#F4F1EA" stroke-width="3"/><path d="M6 27 q3.5-4 7 0 t7 0 t7 0 t7 0" fill="none" stroke="#F4F1EA" stroke-width="3"/></svg></span><span class="who"><b>salitre.surf</b><span>Salinas, Asturias</span></span><span class="more">···</span></div>
+        <div class="pic"><img src="images/s-post.webp" alt="" width="560" height="630"><span class="tag">Este sábado</span><div class="txt"><p>Olas de 1,5 m</p><span class="pill">Iniciación · 30 €</span></div></div>
+        <div class="acts"><svg class="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.3 3 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3 1.6-1.8 3.1-3 5.3-3 3.7 0 5.8 3.8 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 1 1-3.3-6.5A8 8 0 0 1 20 11.5zM20 20l-2.6-3"/></svg><svg viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7z M10 13l11-10"/></svg><svg class="save" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg></div>
+        <div class="likes">312 Me gusta</div>
+        <div class="cap"><b>salitre.surf</b> Sábado de olas en Salinas 🌊 Clase de iniciación con tabla y neopreno incluidos. Escríbenos por DM.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="porque">
-  <span class="eyebrow">Por qué Nuvora</span>
-  <h2 class="sec-t">Tres razones para tu negocio.</h2>
-  <ol class="why"><li><strong>Un solo estudio.</strong><span>Logo, web y redes salen del mismo equipo, así que todo encaja desde el principio y no coordinas a tres personas.</span></li><li><strong>Precio cerrado.</strong><span>Sabes lo que pagas antes de empezar. Si necesitas algo más, te decimos el precio antes de tocar nada.</span></li><li><strong>Español y francés.</strong><span>Si tu negocio recibe clientes franceses, escribimos la web en los dos idiomas.</span></li></ol>
+<section class="sec" id="servicios">
+  <h2 class="sec-t"><span class="ln">Tu web en Gijón.</span><span class="ln">Y todo lo demás, con un solo equipo.</span></h2>
+  <ul class="svc">
+    <li><strong>Branding y <em>logo</em></strong><span>Logo, colores, tipografías y una guía sencilla para que todo sea coherente.</span></li>
+    <li><strong>Páginas <em>web</em></strong><span>A medida, rápidas, pensadas para el móvil y para que te escriban.</span></li>
+    <li><strong>Contenido para <em>redes</em></strong><span>Plantillas editables con tu marca y posts de lanzamiento.</span></li>
+    <li><strong>Digitalización con <em>IA</em></strong><span>Ficha de Google, reservas, WhatsApp, formularios y herramientas de IA.</span></li>
+    <li><strong>Tiendas <em>online</em></strong><span>Tu catálogo a la venta en internet, con pago con tarjeta o Bizum, envíos y control de stock.</span></li>
+  </ul>
+</section>
+
+<section class="sec" id="trabajos">
+  <div class="sec-head">
+    Ejemplos de lo que hacemos para barberías, restaurantes, gimnasios y clínicas. Toca uno para verlo en vivo.
+  </div>
+  <div class="bento">
+    <a class="tile t-corte trio" href="https://landrytalbotpro.github.io/corte-co/"><span class="trio-in"><img src="images/p-cposter.webp" alt="Cartel de Corte & Co. en la calle" loading="lazy" width="900" height="599"><img src="images/p-cphone.webp" alt="Story de Corte & Co. en un móvil" loading="lazy" width="599" height="900"><img src="images/p-ccard.webp" alt="Carta de precios de Corte & Co." loading="lazy" width="424" height="877"></span><span class="meta"><strong>Corte &amp; Co.</strong><small>Barbería · Marca + web + redes</small></span></a>
+    <a class="tile t-volteo" href="https://landrytalbotpro.github.io/volteo/"><img src="images/p-volteo.webp" alt="Web de VOLTÉO en el móvil" loading="lazy" width="600" height="800"><span class="meta"><strong>VOLTÉO</strong><small>Coaching premium · Dirección visual + web</small></span></a>
+    <a class="tile t-braza" href="https://landrytalbotpro.github.io/braza-restaurante/"><img src="images/p-braza.webp" alt="Web del restaurante Braza" loading="lazy" width="900" height="507"><span class="meta"><strong>Braza</strong><small>Restaurante · Web</small></span></a>
+    <a class="tile t-elan" href="https://landrytalbotpro.github.io/Elan-Studio/"><img src="images/p-elan.webp" alt="Web de Élan Studio" loading="lazy" width="900" height="507"><span class="meta"><strong>Élan Studio</strong><small>Belleza · Web</small></span></a>
+    <a class="tile t-sourire" href="https://landrytalbotpro.github.io/Sourire-paris/"><img src="images/p-sourire.webp" alt="Web de Sourire Paris" loading="lazy" width="900" height="507"><span class="meta"><strong>Sourire Paris</strong><small>Clínica dental · Web</small></span></a>
+    <a class="tile t-vantia" href="https://landrytalbotpro.github.io/vantia-ia/"><img src="images/p-vantia.webp" alt="Web de Vantia IA" loading="lazy" width="900" height="507"><span class="meta"><strong>Vantia IA</strong><small>Inmobiliarias · Web + IA</small></span></a>
+    <a class="tile t-forge trio" href="https://landrytalbotpro.github.io/forge-gym/"><span class="trio-in"><img src="images/p-fflyer.webp" alt="Folleto de planes de Forge" loading="lazy" width="675" height="900"><img src="images/p-fphone.webp" alt="Story de Forge en un móvil" loading="lazy" width="599" height="900"><img src="images/p-fposter.webp" alt="Cartel de Forge en la calle" loading="lazy" width="900" height="599"></span><span class="meta"><strong>Forge</strong><small>Gimnasio · Marca + web + redes</small></span></a>
+  </div>
+</section>
+
+<section class="sec" id="gijon">
+  <h2 class="sec-t"><span class="ln">Estamos en Gijón.</span><span class="ln">Trabajamos en toda Asturias.</span></h2>
+  <ul class="svc">
+    <li><strong>Gijón, Oviedo y <em>Avilés</em></strong><span>Trabajamos con negocios de toda Asturias. Hablamos por WhatsApp o nos vemos en Gijón si lo prefieres.</span></li>
+    <li><strong>Precio <em>cerrado</em></strong><span>Web desde 550 €, lista en una semana. Sabes lo que pagas antes de empezar.</span></li>
+    <li><strong>Español y <em>francés</em></strong><span>Si recibes clientes o turistas franceses, tu web les habla en su idioma.</span></li>
+    <li><strong>Casas rurales y <em>turismo</em></strong><span>Webs para alojamientos con reserva directa por WhatsApp. <a href="turismo.html">Ver la oferta para alojamientos</a>.</span></li>
+  </ul>
+</section>
+
+<section class="sec" id="oferta">
+  <h2 class="sec-t"><span class="ln">Precio cerrado antes de empezar.</span><span class="ln">Sin letra pequeña.</span></h2>
+  <div class="prices">
+    <article class="pk">
+      <h3>Web</h3>
+      <p class="pr" data-count="550">550 €</p>
+      <p class="pk-d">Una página a medida para empezar a recibir clientes.</p>
+      <ul><li>Diseño a medida, perfecta en móvil</li><li>Servicios, precios y fotos</li><li>Contacto por WhatsApp y Google Maps</li></ul>
+      <p class="when">Lista en 1 semana</p>
+      <a class="btn ghost" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20Web%20de%20550%20%E2%82%AC">Quiero esta</a>
+    </article>
+    <article class="pk star">
+      <span class="badge">El más elegido</span>
+      <h3>Tu marca en 10 días</h3>
+      <p class="pr" data-count="1200">1.200 €</p>
+      <p class="pk-d">Marca, web y redes listas a la vez, con la misma identidad.</p>
+      <ul><li>Logo e identidad visual</li><li>Web de 4 a 5 páginas con textos</li><li>6 plantillas para redes: posts, stories y portada</li><li>Preparada para Google: ficha y SEO básico</li><li>2 rondas de cambios en logo y en web</li></ul>
+      <p class="when">Lista en 10 días</p>
+      <a class="btn grad" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20%22Tu%20marca%20en%2010%20d%C3%ADas%22">Quiero mi marca</a>
+    </article>
+    <article class="pk">
+      <h3>Premium</h3>
+      <p class="pr" data-count="2300">2.300 €</p>
+      <p class="pk-d">Todo lo anterior, más contenido y acompañamiento.</p>
+      <ul><li>Branding completo</li><li>Contenido de lanzamiento para redes</li><li>Herramientas de IA para tu negocio</li><li>Acompañamiento los primeros meses</li></ul>
+      <p class="when">Lista en 4 semanas</p>
+      <a class="btn ghost" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20el%20pack%20Premium">Quiero esta</a>
+    </article>
+  </div>
+  <p class="extra">Acompañamiento mensual opcional: 45 €/mes, sin permanencia. Alojamiento incluido, solo pagas el dominio (unos 15 € al año, a tu nombre).</p>
+  <aside class="shop">
+    <div><h3>¿Quieres vender online?</h3><p>Aparte de los packs, también hacemos tiendas online: catálogo, pago con tarjeta y Bizum, envíos y stock. <strong>Desde 950 €.</strong> Si la sumas a uno de nuestros packs, te hacemos mejor precio.</p></div>
+    <a class="btn grad" href="https://wa.me/34675153535?text=Hola%2C%20me%20interesa%20una%20tienda%20online">Quiero mi tienda online</a>
+  </aside>
 </section>
 
 <section class="sec" id="faq">
-  <h2 class="sec-t">Antes de escribirnos</h2>
-  <div class="faq"><details><summary>¿Trabajáis solo en Gijón?</summary><p>Estamos en Gijón y trabajamos con negocios de toda Asturias: Oviedo, Avilés y el resto. También podemos trabajar a distancia.</p></details><details><summary>¿Cuánto cuesta una web?</summary><p>Desde 550 € con precio cerrado antes de empezar. Si quieres marca, web y redes a la vez, el pack «Tu marca en 10 días» cuesta 1.200 €.</p></details><details><summary>¿Cuánto tardáis?</summary><p>La web de 550 € está lista en una semana. Marca, web y redes juntas, en 10 días.</p></details><details><summary>¿La web es realmente mía?</summary><p>Sí. No alquilas nada ni pagas una suscripción obligatoria. Solo pagas el dominio, unos 15 € al año, a tu nombre.</p></details><details><summary>¿Puedo cambiar cosas después?</summary><p>El pack incluye 2 rondas de cambios en el logo y 2 en la web. Si necesitas más, te decimos el precio antes de tocar nada. El acompañamiento mensual es opcional: 45 €/mes, sin permanencia.</p></details><details><summary>¿Hacéis tiendas online?</summary><p>Sí: catálogo, pago con tarjeta y Bizum, envíos y stock. Desde 950 €.</p></details></div>
+  <h2 class="sec-t">Antes de escribirnos</h2>
+  <div class="faq"><details><summary>¿Trabajáis solo en Gijón?</summary><p>Estamos en Gijón y trabajamos con negocios de toda Asturias: Oviedo, Avilés y el resto. También a distancia, en español y francés.</p></details><details><summary>¿Cuánto cuesta una web en Gijón?</summary><p>Desde 550 € con precio cerrado antes de empezar. Si quieres marca, web y redes a la vez, el pack «Tu marca en 10 días» cuesta 1.200 €.</p></details><details><summary>¿Cuánto tardáis?</summary><p>La web de 550 € está lista en una semana. Marca, web y redes juntas, en 10 días.</p></details><details><summary>¿La web es realmente mía?</summary><p>Sí. No alquilas nada ni pagas una suscripción obligatoria. Solo pagas el dominio, unos 15 € al año, a tu nombre.</p></details><details><summary>¿Y si quiero cambiar cosas?</summary><p>El pack incluye 2 rondas de cambios en el logo y 2 en la web. Si necesitas más, te decimos el precio antes de tocar nada.</p></details></div>
 </section>
 
 <section class="offer" id="contacto">
   <h2>¿Empezamos tu web?</h2>
-  <p>Escríbenos con el nombre de tu negocio y te decimos qué mejoraríamos, sin compromiso.</p>
-  <a class="btn" href="https://wa.me/34675153535">Hablar por WhatsApp</a>
+  <p>Cuéntanos qué haces y qué necesitas. Te respondemos en menos de 24 horas.</p>
+  <div class="contact-grid"><a class="btn grad" href="https://wa.me/34675153535">Hablar por WhatsApp</a></div>
+  <p class="meta-line">nuvorastudio.art@gmail.com · +34&nbsp;675&nbsp;15&nbsp;35&nbsp;35 · Asturias&nbsp;/&nbsp;Asturies&nbsp;·&nbsp;Francia</p>
 </section>
 </main>
 
-<footer class="note"><span>© 2026 Nuvora Studio · Gijón, Asturias</span><span><a href="./">Nuvora Studio</a> · <a href="turismo.html">Casas rurales</a> · <a href="privacidad.html">Privacidad</a> · <a href="aviso-legal.html">Aviso legal</a></span></footer>
-<a class="wa-sticky" href="https://wa.me/34675153535">💬 Escríbenos por WhatsApp</a>
+<footer class="note"><span>©&nbsp;2026 Nuvora&nbsp;Studio · Gijón, Asturias&nbsp;/&nbsp;Asturies&nbsp;·&nbsp;Francia</span><span>Salitre es una marca inventada para el ejemplo · <a href="./">Inicio</a> · <a href="turismo.html">Casas rurales</a> · <a href="privacidad.html">Privacidad</a> · <a href="aviso-legal.html">Aviso legal</a></span></footer>
+
+<a class="wa-sticky" href="https://wa.me/34675153535">💬 Hablemos por WhatsApp</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" integrity="sha384-B2WBjDzEjJpYvhmi2UyEn7rektqkf5suS6sNoyyrf0EBAwBHdkiXxIlU0V5Ru2ed" crossorigin="anonymous"></script>
+<script>
+(function(){
+  // CTA fijo en móvil: se oculta cuando el bloque de contacto está a la vista
+  var st=document.querySelector('.wa-sticky'), ct=document.getElementById('contacto'), hero=document.querySelector('.hero');
+  if(st && 'IntersectionObserver' in window){
+    var vis={c:false,h:true};
+    var upd=function(){ st.classList.toggle('is-hidden', vis.c||vis.h); };
+    new IntersectionObserver(function(e){vis.c=e[0].isIntersecting;upd();}).observe(ct);
+    new IntersectionObserver(function(e){vis.h=e[0].isIntersecting;upd();}).observe(hero);
+  }
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !window.gsap || !window.ScrollTrigger){ document.documentElement.classList.add('static'); return; }
+  gsap.registerPlugin(ScrollTrigger);
+  try{
+    var lenis = new Lenis({lerp:0.1, anchors:{offset:0}});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t*1000); });
+    gsap.ticker.lagSmoothing(0);
+  }catch(e){}
+
+  gsap.from('.kinetic .line > span', {yPercent:110, duration:1.1, ease:'power4.out', stagger:0.14, delay:0.15});
+  gsap.from('.hero-foot, .cue', {opacity:0, y:20, duration:.8, delay:.75, stagger:.1});
+
+  function phone(){ var h=Math.min(520, window.innerHeight*0.6); return {w:h*0.5, h:h}; }
+  function post(){ var w=Math.min(380, window.innerWidth*0.82); var h=Math.min(w*1.18, window.innerHeight*0.62); return {w:h/1.18, h:h}; }
+  var paths = document.querySelectorAll('.l-logo .draw');
+  paths.forEach(function(p){ var L=p.getTotalLength(); p.style.strokeDasharray=L; p.style.strokeDashoffset=L; });
+  gsap.set('.frame', {width:function(){return phone().w;}, height:function(){return phone().h;}});
+  var caps = document.querySelectorAll('.cap'), steps = document.querySelectorAll('.steps i'), current = 0;
+  function setStep(i){ if(i===current) return; current=i;
+    caps.forEach(function(c,k){ c.classList.toggle('is-on', k===i); });
+    steps.forEach(function(s,k){ s.classList.toggle('is-on', k<=i); }); }
+  var tl = gsap.timeline({ defaults:{ease:'power2.inOut'},
+    scrollTrigger:{ trigger:'.build', start:'top top', end:'+=320%', pin:true, scrub:0.8, invalidateOnRefresh:true,
+      onUpdate:function(self){ setStep(self.progress<0.36?0:(self.progress<0.7?1:2)); } } });
+  tl.to(paths, {strokeDashoffset:0, duration:1.2, stagger:0.15, ease:'none'})
+    .to('.l-logo .fname', {opacity:1, duration:.4}, '-=.3')
+    .to({}, {duration:.4})
+    .to('.bezel', {opacity:1, duration:.6})
+    .to('.l-logo', {scale:.32, y:function(){return -phone().h/2 + 34;}, opacity:0, duration:.7}, '<')
+    .to('.l-web', {opacity:1, duration:.6}, '<.2')
+    .from('.l-web h3, .l-web .cta', {y:30, stagger:.1, duration:.5}, '<.1')
+    .to({}, {duration:.5})
+    .to('.frame', {width:function(){return post().w;}, height:function(){return post().h;}, borderRadius:10, duration:.9})
+    .to('.bezel', {borderWidth:2, duration:.9}, '<')
+    .to('.l-web', {opacity:0, duration:.4}, '<')
+    .to('.l-post', {opacity:1, duration:.5}, '<.35')
+    .from('.l-post .pic .txt', {y:24, opacity:0, duration:.5}, '<.2')
+    .to({}, {duration:.4});
+
+  // Servicios: filas que entran y línea que se dibuja
+  gsap.utils.toArray('.svc li').forEach(function(li,i){
+    gsap.from(li,{y:40,opacity:0,duration:.7,ease:'power3.out',scrollTrigger:{trigger:li,start:'top 90%'}});
+  });
+  gsap.from('#servicios .sec-t',{y:30,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'#servicios',start:'top 80%'}});
+  var offs = [[0,120,-3],[80,60,4],[-80,80,-4],[0,100,3],[80,90,-3],[-60,80,4],[40,100,-2]];
+  document.querySelectorAll('.bento .tile').forEach(function(t,i){
+    var o = offs[i % offs.length];
+    gsap.from(t, {x:o[0], y:o[1], rotation:o[2], scale:.94, ease:'none',
+      scrollTrigger:{trigger:t, start:'top 100%', end:'top 70%', scrub:0.6}});
+  });
+})();
+</script>
 </body>
 </html>
