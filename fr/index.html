@@ -371,6 +371,26 @@ mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
 .pr .iva{font-size:.32em;font-weight:500;letter-spacing:0;margin-left:.35em;opacity:.7;vertical-align:.9em}
 .pay{margin:10px 0 0;max-width:60ch;color:var(--muted)}
 </style>
+<style>
+/* webs reales en línea */
+.live{margin-top:clamp(40px,7vh,72px)}
+.live-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px 40px;margin-bottom:22px}
+.live-head h3{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,2.6vw,2.1rem);letter-spacing:-.03em;margin:0}
+.live-head p{margin:0;max-width:44ch;color:var(--muted)}
+.live-pill{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.live-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.live-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.live-c{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:var(--paper);text-decoration:none;color:inherit;border:1px solid color-mix(in srgb,var(--ink) 10%,transparent);transition:transform .3s}
+.live-c:hover{transform:translateY(-4px)}
+.live-img{aspect-ratio:16/9;overflow:hidden;background:var(--bg)}
+.live-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+.live-c:hover .live-img img{transform:scale(1.03)}
+.live-meta{display:flex;flex-direction:column;gap:6px;padding:18px 20px 20px}
+.live-meta strong{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.live-meta small{color:var(--muted);font-size:.95rem}
+.live-meta em{font-style:normal;font-weight:600;margin-top:4px}
+@media (prefers-reduced-motion: reduce){.live-c,.live-img img{transition:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#servicios">Aller au contenu</a>
@@ -452,6 +472,8 @@ mark.hl{background:none;color:inherit;text-decoration:none;padding:0}
     <a class="tile t-vantia" href="https://landrytalbotpro.github.io/vantia-ia/"><img src="../images/p-vantia.webp" alt="Site de Vantia IA" loading="lazy" width="900" height="507"><span class="meta"><strong>Vantia IA</strong><small>Agences immobilières · Site + IA</small></span></a>
     <a class="tile t-forge trio" href="https://landrytalbotpro.github.io/forge-gym/"><span class="trio-in"><img src="../images/p-fflyer.webp" alt="Flyer des abonnements Forge" loading="lazy" width="675" height="900"><img src="../images/p-fphone.webp" alt="Story de Forge sur un téléphone" loading="lazy" width="599" height="900"><img src="../images/p-fposter.webp" alt="Affiche de Forge dans la rue" loading="lazy" width="900" height="599"></span><span class="meta"><strong>Forge</strong><small>Salle de sport · Marque + site + réseaux</small></span></a>
   </div>
+
+  <div class="live"><div class="live-head"><div><span class="live-pill">En ligne</span><h3>Des sites réels, en ligne aujourd’hui</h3></div><p>En plus des démos, ces projets sont déjà en ligne. Ouvrez-les et testez-les.</p></div><div class="live-grid"><a class="live-c" href="https://nextlevelplayerai.com/fr/" target="_blank" rel="noopener"><span class="live-img"><img src="../images/real-nlp.jpg" alt="Site de Next Level Player" loading="lazy" width="1200" height="676"></span><span class="live-meta"><strong>Next Level Player</strong><small>Carrière et image des jeunes footballeurs. Site FR/ES avec test pour choisir son offre et formulaire.</small><em>nextlevelplayerai.com ↗</em></span></a><a class="live-c" href="https://radar-ahorro.pages.dev/fr/" target="_blank" rel="noopener"><span class="live-img"><img src="../images/real-radar.jpg" alt="Application web Radar" loading="lazy" width="1200" height="676"></span><span class="live-meta"><strong>Radar</strong><small>Application web qui analyse un relevé bancaire et repère abonnements et frais. FR/ES.</small><em>radar-ahorro.pages.dev ↗</em></span></a></div></div>
 </section>
 
 <section class="sec" id="servicios">
