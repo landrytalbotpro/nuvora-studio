@@ -1,78 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Corte &amp; Co. · Barbershop traditionnel Paris</title>
-<meta name="description" content="Barbershop traditionnel à Paris. Coupe, taille de barbe, rasage au coupe-chou.">
+    <title>Corte & Co. · Barbershop à Gijón</title>
+    <meta name="description" content="Barbershop à Gijón. Coupes, barbe et rasage traditionnel. Des prix clairs, sans surprise.">
   <link rel="canonical" href="https://nuvorastudio.es/demos/corte-co-fr/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Corte &amp; Co. · Barbershop traditionnel Paris">
-  <meta property="og:description" content="Barbershop traditionnel à Paris. Coupe, taille de barbe, rasage au coupe-chou.">
+  <meta property="og:title" content="Corte &amp; Co. · Barbershop à Gijón">
+  <meta property="og:description" content="Barbershop à Gijón. Coupes, barbe et rasage traditionnel. Des prix clairs, sans surprise.">
   <meta property="og:url" content="https://nuvorastudio.es/demos/corte-co-fr/">
   <meta property="og:image" content="https://nuvorastudio.es/images/corte-fr.jpg">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Corte &amp; Co. · Barbershop traditionnel Paris">
-  <meta name="twitter:description" content="Barbershop traditionnel à Paris. Coupe, taille de barbe, rasage au coupe-chou.">
+  <meta name="twitter:title" content="Corte &amp; Co. · Barbershop à Gijón">
+  <meta name="twitter:description" content="Barbershop à Gijón. Coupes, barbe et rasage traditionnel. Des prix clairs, sans surprise.">
   <meta name="twitter:image" content="https://nuvorastudio.es/images/corte-fr.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box;}
-  body{margin:0;padding:0;}
-  a{color:#B8865B;}
-  a:hover{color:#F0E6D8;}
-  .nav-links{display:flex; align-items:center; gap:24px; flex-wrap:wrap;}
-  .nav-links a[aria-current="page"]{font-weight:700; text-decoration:underline; text-underline-offset:4px;}
-  .burger-btn{display:none; flex-direction:column; justify-content:center; align-items:center; gap:5px; width:40px; height:40px; background:none; border:none; cursor:pointer; padding:0; flex-shrink:0;}
-  .burger-btn span{display:block; width:22px; height:2px; background:#B8865B; border-radius:2px; transition:transform .25s ease, opacity .25s ease;}
-  .burger-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-  .burger-btn.open span:nth-child(2){opacity:0;}
-  .burger-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-  @media (max-width: 860px){
-    .burger-btn{display:flex;}
-    .nav-links{
-      display:none;
-      position:absolute;
-      top:100%;
-      left:0;
-      right:0;
-      flex-direction:column;
-      align-items:center;
-      gap:18px;
-      background:#1A1613;
-      padding:28px 32px 32px;
-      border-bottom:1px solid rgba(184,134,91,0.25);
-      box-shadow:0 16px 32px rgba(0,0,0,0.3);
-    }
-    .nav-links.open{display:flex;}
-    .hero-grid{grid-template-columns:1fr !important;}
-    .hero-copy{text-align:center; align-items:center !important;}
-    .hero-cta{justify-content:center;}
-    .grid-4{grid-template-columns:1fr 1fr !important;}
-    .grid-3{grid-template-columns:1fr !important;}
-    .story-grid{grid-template-columns:1fr !important;}
-    .team-grid{grid-template-columns:1fr !important;}
-    .location-grid{grid-template-columns:1fr !important;}
-    .footer-grid{grid-template-columns:1fr 1fr !important; gap:32px !important;}
-    .page-hero h1{font-size:32px !important;}
-  }
-  @media (max-width: 560px){
-    .grid-4{grid-template-columns:1fr !important;}
-    .footer-grid{grid-template-columns:1fr !important;}
-  }
-  @keyframes fadeUp{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);}}
-  @keyframes letterIn{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);}}
-  @keyframes ctaPulse{0%,100%{transform:scale(1);} 50%{transform:scale(1.035);}}
-  @keyframes marqueeScroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
-  .js-hero-title .letter{display:inline-block; opacity:0; animation:letterIn .5s ease forwards;}
-  .cta-final-btn:hover{box-shadow:0 0 30px 6px rgba(184,134,91,0.5);}
-  .js-marquee-track{display:flex; width:max-content; animation:marqueeScroll 22s linear infinite;}
-  #navInner{max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px 32px; transition:padding .3s ease;}
-  #navInner.scrolled{padding:10px 32px;}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,9 +28,9 @@
   "image": "https://nuvorastudio.es/images/corte-fr.jpg",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "00 rue Exemple",
-    "addressLocality": "Paris",
-    "addressCountry": "FR"
+    "streetAddress": "1 rue Exemple",
+    "addressLocality": "Gijón",
+    "addressCountry": "ES"
   }
 }
   </script>
@@ -103,321 +49,160 @@
   </style>
 </head>
 <body>
-<div class="demo-bar"><span>Démo de design web</span><span class="demo-lang"><a href="../corte-co/" hreflang="es" lang="es">ES</a><span aria-hidden="true">|</span><a href="#" hreflang="fr" lang="fr" aria-current="true">FR</a></span></div>
+<div class="demo-bar"><span>Démo de design web</span><span class="demo-lang"><a href="../corte-co/index.html" hreflang="es" lang="es">ES</a><span aria-hidden="true">|</span><a href="#" hreflang="fr" lang="fr" aria-current="true">FR</a></span></div>
 
-<div style="background:#1A1613; color:#F0E6D8; font-family:'Archivo',sans-serif; overflow-x:hidden;">
-
-  <!-- NAVBAR -->
-  <header style="position:sticky; top:0; z-index:50; background:rgba(26,22,19,0.95); backdrop-filter:blur(6px); border-bottom:1px solid rgba(184,134,91,0.25);">
-    <div id="navInner">
-      <a href="index.html" style="font-family:'Bevan',serif; font-weight:400; font-size:22px; color:#B8865B; text-decoration:none; letter-spacing:0.02em;">Corte &amp; Co.</a>
-      <nav class="nav-links" id="mainNav">
-        <a href="index.html" aria-current="page" style="text-decoration:none; color:#F0E6D8; font-size:14px;">Accueil</a>
-        <a href="maison.html" style="text-decoration:none; color:#F0E6D8; font-weight:500; font-size:14px;">La Maison</a>
-        <a href="prestations.html" style="text-decoration:none; color:#F0E6D8; font-weight:500; font-size:14px;">Prestations</a>
-        <a href="contact.html" style="text-decoration:none; color:#F0E6D8; font-weight:500; font-size:14px;">Avis &amp; Accès</a>
-        <a href="#" aria-disabled="true" title="Démo : réservation non active" class="js-magnetic demo-cta" style="text-decoration:none; background:#6B2B2B; color:#F0E6D8; padding:10px 20px; border-radius:2px; font-weight:600; font-size:13px; letter-spacing:0.03em; text-transform:uppercase; display:inline-block; transition:transform .2s ease, box-shadow .3s ease;">Réserver</a>
-      </nav>
-      <button class="burger-btn" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="accueil" style="position:relative; padding:100px 32px 84px; max-width:1180px; margin:0 auto; overflow:hidden;">
-    <div class="js-parallax" data-speed="0.15" style="position:absolute; top:-30px; right:4%; width:180px; height:180px; border-radius:50%; overflow:hidden; opacity:0.35; transform:rotate(20deg); will-change:transform;">
-      <div style="width:100%; height:100%; background:repeating-linear-gradient(45deg, #6B2B2B 0px, #6B2B2B 16px, #F0E6D8 16px, #F0E6D8 32px, #B8865B 32px, #B8865B 48px);"></div>
-    </div>
-    <div class="hero-grid" style="position:relative; z-index:1; display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;">
-      <div class="hero-copy" style="display:flex; flex-direction:column; align-items:flex-start; gap:22px;">
-        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; color:#B8865B; letter-spacing:0.14em; text-transform:uppercase; opacity:0; animation:fadeUp .6s ease .1s both;">Barbershop traditionnel — Paris</span>
-        <h1 class="js-hero-title" style="font-family:'Bevan',serif; font-weight:400; font-size:44px; line-height:1.2; margin:0; color:#F0E6D8;">L'art de la coupe, comme autrefois</h1>
-        <p style="font-size:16px; line-height:1.7; color:#D8C9B4; margin:0; max-width:460px; opacity:0; animation:fadeUp .6s ease .6s both;">Coupe précise, rasage au coupe-chou, gestes du barbier traditionnel. Ici, on prend le temps de bien faire.</p>
-        <div class="hero-cta" style="display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; opacity:0; animation:fadeUp .6s ease .9s both;">
-          <a href="#" aria-disabled="true" title="Démo : réservation non active" class="js-magnetic demo-cta" style="text-decoration:none; background:#6B2B2B; color:#F0E6D8; padding:15px 28px; border-radius:2px; font-weight:600; font-size:14px; letter-spacing:0.03em; text-transform:uppercase; display:inline-block; transition:transform .2s ease, box-shadow .3s ease;">Réserver<small class="demo-note">Démo : réservation non active</small></a>
-          <a href="prestations.html" class="js-magnetic" style="text-decoration:none; background:transparent; color:#F0E6D8; padding:15px 28px; border-radius:2px; font-weight:600; font-size:14px; letter-spacing:0.03em; text-transform:uppercase; border:1.5px solid #B8865B; display:inline-block; transition:transform .2s ease, box-shadow .3s ease;">Nos prestations</a>
+    <nav class="navbar">
+        <span class="logo">CORTE&CO.</span>
+        <div class="nav-links" id="mainNav">
+            <a href="#servicios">Services</a>
+            <a href="#equipo">Équipe</a>
+            <a href="#galeria">Galerie</a>
+            <a href="#avis">Avis</a>
         </div>
-      </div>
-      <div style="position:relative;">
-        <img src="https://images.unsplash.com/photo-1634302104565-cc698ee83144?auto=format&fit=crop&w=800&h=800&q=80" alt="Barbier au travail sur un client" style="width:100%; aspect-ratio:1/1; object-fit:cover; border:1px solid rgba(184,134,91,0.3); display:block;">
-      </div>
-    </div>
-  </section>
+        <div class="nav-actions">
+            <a href="#" aria-disabled="true" title="Démo : réservation non active" class="nav-cta demo-cta">Réserver</a>
+            <button class="burger-btn" id="burgerBtn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
-  <!-- TRUST BAR -->
-  <section class="js-trustbar" style="background:#6B2B2B; padding:40px 32px;">
-    <div class="grid-4" style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:24px; text-align:center;">
-      <div><div style="font-family:'Bevan',serif; font-weight:400; font-size:28px; color:#F0E6D8;">Coupe</div><div style="font-size:12px; color:#E4C9B8; margin-top:6px; letter-spacing:0.03em;">classique &amp; dégradés</div></div>
-      <div><div style="font-family:'Bevan',serif; font-weight:400; font-size:28px; color:#F0E6D8;">Barbe</div><div style="font-size:12px; color:#E4C9B8; margin-top:6px; letter-spacing:0.03em;">taille &amp; entretien</div></div>
-      <div><div style="font-family:'Bevan',serif; font-weight:400; font-size:28px; color:#F0E6D8;">Rasage</div><div style="font-size:12px; color:#E4C9B8; margin-top:6px; letter-spacing:0.03em;">au coupe-chou</div></div>
-      <div><div style="font-family:'Bevan',serif; font-weight:400; font-size:28px; color:#F0E6D8;">Paris</div><div style="font-size:12px; color:#E4C9B8; margin-top:6px; letter-spacing:0.03em;">adresse fictive (démo)</div></div>
-    </div>
-  </section>
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <h1 class="hero-title">DES COUPES<br>QUI TIENNENT<br>PAROLE</h1>
+        <a href="#" aria-disabled="true" title="Démo : réservation non active" class="hero-cta demo-cta">Prendre rendez-vous<small class="demo-note">Démo : réservation non active</small></a>
+    </header>
 
-  <!-- MARQUEE -->
-  <section style="overflow:hidden; padding:16px 0; background:#221D18; border-top:1px solid rgba(184,134,91,0.15); border-bottom:1px solid rgba(184,134,91,0.15);">
-    <div class="js-marquee-track">
-      <span style="white-space:nowrap; font-family:'Bevan',serif; font-size:15px; letter-spacing:0.12em; color:#B8865B; padding-right:24px;">COUPE · BARBE · RASAGE · TRADITION · COUPE · BARBE · RASAGE · TRADITION · COUPE · BARBE · RASAGE · TRADITION · </span>
-      <span style="white-space:nowrap; font-family:'Bevan',serif; font-size:15px; letter-spacing:0.12em; color:#B8865B; padding-right:24px;">COUPE · BARBE · RASAGE · TRADITION · COUPE · BARBE · RASAGE · TRADITION · COUPE · BARBE · RASAGE · TRADITION · </span>
-    </div>
-  </section>
+    <section class="infobar">
+        <div class="infobar-item">📍 1 rue Exemple, Gijón</div>
+        <div class="infobar-item">🕒 Mar–Sam · 9 h–19 h</div>
+        <div class="infobar-item">✂️ Des prix clairs, sans surprise</div>
+    </section>
 
-  <!-- CONCEPT (teaser) -->
-  <section style="padding:80px 32px; background:#221D18; border-top:1px solid rgba(184,134,91,0.15); border-bottom:1px solid rgba(184,134,91,0.15);">
-    <div class="story-grid" style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;">
-      <img src="https://images.unsplash.com/photo-1641318175316-795cd2db99f8?auto=format&fit=crop&w=700&h=875&q=80" alt="Barbier au travail dans son établi" style="width:100%; aspect-ratio:4/5; object-fit:cover; border:1px solid rgba(184,134,91,0.25); display:block;">
-      <div style="display:flex; flex-direction:column; gap:18px;">
-        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; color:#B8865B; letter-spacing:0.14em; text-transform:uppercase;">Concept</span>
-        <h2 style="font-family:'Bevan',serif; font-weight:400; font-size:28px; color:#F0E6D8; margin:0;">Une technique transmise, jamais expédiée</h2>
-        <a href="maison.html" style="text-decoration:underline; text-underline-offset:4px; color:#B8865B; font-weight:600; font-size:14px;">Découvrir la Maison et l'équipe ↗</a>
-      </div>
-    </div>
-  </section>
+    <section class="services" id="servicios">
+        <p class="kicker">Services</p>
+        <h2>Des prix clairs, sans surprise</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Coupe classique</h3>
+                <p>Coupe aux ciseaux ou à la tondeuse, finition au rasoir.</p>
+                <span class="prix">15&nbsp;€</span>
+            </div>
+            <div class="service-card service-card-accent">
+                <span class="tag">Le plus demandé</span>
+                <h3>Coupe + barbe</h3>
+                <p>La formule complète, taille de barbe incluse.</p>
+                <span class="prix">25&nbsp;€</span>
+            </div>
+            <div class="service-card">
+                <h3>Rasage traditionnel</h3>
+                <p>Serviette chaude, mousse faite à la main, coupe-chou classique.</p>
+                <span class="prix">14&nbsp;€</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- NAV CARDS (Prestations / Avis & Accès) -->
-  <section style="padding:96px 32px; max-width:1180px; margin:0 auto;">
-    <div style="max-width:560px; margin:0 auto 48px; text-align:center;">
-      <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; color:#B8865B; letter-spacing:0.14em; text-transform:uppercase;">À découvrir</span>
-      <h2 style="font-family:'Bevan',serif; font-weight:400; font-size:30px; color:#F0E6D8; margin:12px 0 0;">Tout savoir avant de venir</h2>
-    </div>
-    <div class="grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
-      <a href="prestations.html" class="js-tilt-card" style="text-decoration:none; background:#221D18; border:1px solid rgba(184,134,91,0.2); padding:32px 24px; display:flex; flex-direction:column; gap:14px; position:relative; transition:transform .25s ease;">
-        <h3 style="font-family:'Bevan',serif; font-weight:400; font-size:17px; color:#F0E6D8; margin:0;">Prestations &amp; tarifs</h3>
-        <p style="font-size:13.5px; line-height:1.6; color:#D8C9B4; margin:0;">Coupe, barbe, rasage traditionnel, soins du visage.</p>
-        <span style="color:#B8865B; font-size:13px; font-weight:600;">Voir les prestations ↗</span>
-      </a>
-      <a href="maison.html" class="js-tilt-card" style="text-decoration:none; background:#221D18; border:1px solid rgba(184,134,91,0.2); padding:32px 24px; display:flex; flex-direction:column; gap:14px; position:relative; transition:transform .25s ease;">
-        <h3 style="font-family:'Bevan',serif; font-weight:400; font-size:17px; color:#F0E6D8; margin:0;">La Maison &amp; l'équipe</h3>
-        <p style="font-size:13.5px; line-height:1.6; color:#D8C9B4; margin:0;">Le salon, nos trois barbiers, la galerie du geste.</p>
-        <span style="color:#B8865B; font-size:13px; font-weight:600;">Découvrir ↗</span>
-      </a>
-      <a href="contact.html" class="js-tilt-card" style="text-decoration:none; background:#221D18; border:1px solid rgba(184,134,91,0.2); padding:32px 24px; display:flex; flex-direction:column; gap:14px; position:relative; transition:transform .25s ease;">
-        <h3 style="font-family:'Bevan',serif; font-weight:400; font-size:17px; color:#F0E6D8; margin:0;">Avis &amp; accès</h3>
-        <p style="font-size:13.5px; line-height:1.6; color:#D8C9B4; margin:0;">Ce que disent nos clients, horaires et adresse.</p>
-        <span style="color:#B8865B; font-size:13px; font-weight:600;">Nous trouver ↗</span>
-      </a>
-    </div>
-  </section>
+    <section class="concept">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&h=875&q=80" alt="Barbier au travail chez Corte & Co. à Gijón" loading="lazy">
+        <div>
+            <p class="kicker">Concept</p>
+            <h2>Un métier qui s’apprend avec le temps, pas dans la précipitation</h2>
+            <p>Des outils soignés, une technique classique et un accueil chaleureux : voilà comment nous travaillons au quotidien.</p>
+        </div>
+    </section>
 
-  <!-- CTA FINAL -->
-  <section style="padding:80px 32px;">
-    <div style="max-width:1180px; margin:0 auto; background:#6B2B2B; border:1px solid rgba(184,134,91,0.4); padding:64px 48px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:20px;">
-      <h2 style="font-family:'Bevan',serif; font-weight:400; font-size:28px; color:#F0E6D8; margin:0; max-width:520px;">Prêt pour une vraie coupe de barbier ?</h2>
-      <p style="font-size:14.5px; color:#E4C9B8; margin:0; max-width:440px;">Réservez votre créneau, on s'occupe du reste.</p>
-      <a href="#" aria-disabled="true" title="Démo : réservation non active" class="cta-final-btn demo-cta" style="text-decoration:none; background:#B8865B; color:#1A1613; padding:16px 32px; border-radius:2px; font-weight:700; font-size:14px; letter-spacing:0.03em; text-transform:uppercase; margin-top:8px; display:inline-block; animation:ctaPulse 3s ease-in-out infinite; transition:box-shadow .3s ease;">Prendre rendez-vous<small class="demo-note">Démo : réservation non active</small></a>
-    </div>
-  </section>
+    <section class="equipo" id="equipo">
+        <p class="kicker">Notre équipe</p>
+        <h2 style="font-family:'Archivo Black',sans-serif; font-size:2rem;">Deux mains de confiance</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?auto=format&fit=crop&w=300&h=300&q=80" alt="Barbier de Corte &amp; Co. (photo d’illustration)">
+                <h3>Coupes classiques</h3>
+                <span class="role">Barbier</span>
+                <p>Coupes classiques et finitions au rasoir.</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&h=300&q=80" alt="Barbière de Corte &amp; Co. (photo d’illustration)">
+                <h3>Dégradés et rasage</h3>
+                <span class="role">Barbière</span>
+                <p>Spécialiste des dégradés et du rasage traditionnel à la serviette chaude.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer style="padding:56px 32px 32px; border-top:1px solid rgba(184,134,91,0.2);">
-    <div class="footer-grid" style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px;">
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <span style="font-family:'Bevan',serif; font-weight:400; font-size:19px; color:#B8865B;">Corte &amp; Co.</span>
-        <p style="font-size:13px; line-height:1.6; color:#D8C9B4; margin:0; max-width:240px;">Barbershop traditionnel à Paris. Coupe, barbe, rasage — un vrai savoir-faire, pas une coupe rapide.</p>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <span style="font-family:'Bevan',serif; font-weight:400; font-size:14px; color:#F0E6D8;">Maison</span>
-        <a href="index.html" style="text-decoration:none; color:#D8C9B4; font-size:13px;">Accueil</a>
-        <a href="maison.html" style="text-decoration:none; color:#D8C9B4; font-size:13px;">La Maison</a>
-        <a href="prestations.html" style="text-decoration:none; color:#D8C9B4; font-size:13px;">Prestations</a>
-        <a href="contact.html" style="text-decoration:none; color:#D8C9B4; font-size:13px;">Avis &amp; Accès</a>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <span style="font-family:'Bevan',serif; font-weight:400; font-size:14px; color:#F0E6D8;">Contact&amp;Accès</span>
-        <span style="font-size:13px; color:#D8C9B4;">00 rue Exemple, Paris</span>
-        <span style="font-size:13px; color:#D8C9B4;">Non actif (démo)</span>
-        <a href="mailto:bonjour@corteandco.fr" style="text-decoration:none; color:#D8C9B4; font-size:13px;">bonjour@corteandco.fr</a>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:10px;">
-        <span style="font-family:'Bevan',serif; font-weight:400; font-size:14px; color:#F0E6D8;">Suivez-nous</span>
-        <a href="#" style="text-decoration:none; color:#D8C9B4; font-size:13px;">Instagram</a>
-        <a href="#" style="text-decoration:none; color:#D8C9B4; font-size:13px;">Facebook</a>
-        <a href="#" style="text-decoration:none; color:#D8C9B4; font-size:13px;">TikTok</a>
-      </div>
-    </div>
-    <div style="max-width:1180px; margin:40px auto 0; padding-top:20px; border-top:1px solid rgba(184,134,91,0.15); font-size:12px; color:#8A7A68;">© 2026 Corte &amp; Co. — Barbershop, Paris</div>
-  
+    <section class="galeria" id="galeria">
+        <p class="kicker">Galerie</p>
+        <h2 style="font-family:'Archivo Black',sans-serif; font-size:2rem;">Le geste en images</h2>
+        <div class="galeria-grid">
+            <img src="https://images.unsplash.com/photo-1571866190038-266801f5b14c?auto=format&fit=crop&w=500&h=500&q=80" alt="Outils de coupe, toujours prêts">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&h=500&q=80" alt="Intérieur du salon">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=500&h=500&q=80" alt="Détail d’un rasage">
+        </div>
+    </section>
+
+    <section class="avis" id="avis">
+        <p class="kicker">Avis</p>
+        <p>Avis clients : bientôt disponibles.</p>
+    </section>
+
+    <section class="cta-final">
+        <h2>PASSEZ QUAND<br>VOUS VOULEZ</h2>
+        <a href="#" aria-disabled="true" title="Démo : réservation non active" class="hero-cta demo-cta">Réserver<small class="demo-note">Démo : réservation non active</small></a>
+    </section>
+
+    <footer class="footer">
+        <span class="logo">CORTE&CO.</span>
+        <p>&copy; 2026 Corte&Co. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#">Instagram</a>
+            <a href="mailto:demo@example.com">demo@example.com</a>
+        </div>
+    
     <p style="text-align:center; font-size:11px; opacity:0.55; margin-top:16px;" class="nuvora-legal-link"><a href="confidentialite.html" style="color:inherit;">Confidentialité</a></p>
 </footer>
 
-  <div class="cursor-dot" style="position:fixed; top:0; left:0; width:14px; height:14px; border-radius:50%; background:#B8865B; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .2s ease, height .2s ease, background .2s ease, opacity .2s ease; opacity:0.85;"></div>
+    <script>
+    (function () {
+        var btn = document.getElementById('burgerBtn');
+        var nav = document.getElementById('mainNav');
+        if (!btn || !nav) return;
 
-</div>
-
-<script>
-(function () {
-  var observers = [];
-
-  function initScroll() {
-    var navInner = document.getElementById('navInner');
-    var raf = null;
-    window.addEventListener('scroll', function () {
-      if (raf) return;
-      raf = requestAnimationFrame(function () {
-        var y = window.scrollY || window.pageYOffset;
-        if (navInner) navInner.classList.toggle('scrolled', y > 100);
-        document.querySelectorAll('.js-parallax').forEach(function (el) {
-          var speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
-          el.style.transform = 'translateY(' + (y * speed).toFixed(1) + 'px) rotate(20deg)';
+        btn.addEventListener('click', function () {
+            var isOpen = nav.classList.toggle('open');
+            btn.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
-        raf = null;
-      });
-    }, { passive: true });
+
+        nav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
+
+
+  <!-- Sticky mobile CTA (ajouté — checklist Nuvora) -->
+  <style>
+  #nuvora-sticky-cta-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9999;
+    display: none; justify-content: center; align-items: center;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    background: rgba(20,20,20,0.96); backdrop-filter: blur(6px);
   }
-
-  function initHeroLetters() {
-    var el = document.querySelector('.js-hero-title');
-    if (!el) return;
-    var text = el.textContent;
-    el.textContent = '';
-    text.split(' ').forEach(function (word, wi, arr) {
-      var wrap = document.createElement('span');
-      wrap.style.display = 'inline-block';
-      word.split('').forEach(function (ch, i) {
-        var span = document.createElement('span');
-        span.textContent = ch;
-        span.className = 'letter';
-        span.style.animationDelay = ((wi * 4 + i) * 22) + 'ms';
-        wrap.appendChild(span);
-      });
-      el.appendChild(wrap);
-      if (wi < arr.length - 1) {
-        el.appendChild(document.createTextNode(' '));
-      }
-    });
+  #nuvora-sticky-cta-bar a {
+    display: block; width: 100%; max-width: 480px; text-align: center;
+    background: #25D366; color: #fff; font-weight: 700; font-size: 15px;
+    padding: 13px 20px; border-radius: 999px; text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
   }
-
-  function initCounters() {
-    var bar = document.querySelector('.js-trustbar');
-    if (!bar) return;
-    var nums = bar.querySelectorAll('.js-counter');
-    function animate(el) {
-      var target = parseFloat(el.getAttribute('data-target'));
-      var suffix = el.getAttribute('data-suffix') || '';
-      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-      var start = performance.now();
-      var dur = 1200;
-      function step(now) {
-        var p = Math.min(1, (now - start) / dur);
-        var eased = 1 - Math.pow(1 - p, 3);
-        var val = target * eased;
-        el.textContent = (decimals ? val.toFixed(decimals) : Math.round(val).toLocaleString('fr-FR')) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          nums.forEach(animate);
-          obs.disconnect();
-        }
-      });
-    }, { threshold: 0.4 });
-    obs.observe(bar);
-    observers.push(obs);
-  }
-
-  function initCurtain() {
-    var photos = Array.prototype.slice.call(document.querySelectorAll('.js-team-photo'));
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var idx = photos.indexOf(entry.target);
-          entry.target.style.transitionDelay = (idx * 150) + 'ms';
-          entry.target.style.clipPath = 'inset(0 0 0% 0)';
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    photos.forEach(function (p) { obs.observe(p); });
-    observers.push(obs);
-  }
-
-  function initMagnetic() {
-    document.querySelectorAll('.js-magnetic').forEach(function (btn) {
-      btn.addEventListener('mousemove', function (e) {
-        var r = btn.getBoundingClientRect();
-        var dx = (e.clientX - (r.left + r.width / 2)) * 0.3;
-        var dy = (e.clientY - (r.top + r.height / 2)) * 0.3;
-        btn.style.transform = 'translate(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px)';
-        btn.style.boxShadow = '0 0 24px 4px rgba(184,134,91,0.45)';
-      });
-      btn.addEventListener('mouseleave', function () {
-        btn.style.transform = 'translate(0,0)';
-        btn.style.boxShadow = 'none';
-      });
-    });
-  }
-
-  function initTilt() {
-    document.querySelectorAll('.js-tilt-card').forEach(function (card) {
-      card.addEventListener('mousemove', function (e) {
-        var r = card.getBoundingClientRect();
-        var px = (e.clientX - r.left) / r.width - 0.5;
-        var py = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = 'perspective(700px) rotateX(' + (-py * 8).toFixed(2) + 'deg) rotateY(' + (px * 8).toFixed(2) + 'deg) translateY(-4px)';
-      });
-      card.addEventListener('mouseleave', function () {
-        card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0)';
-      });
-    });
-  }
-
-  function initCursor() {
-    var dot = document.querySelector('.cursor-dot');
-    if (!dot) return;
-    if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) {
-      dot.style.display = 'none';
-      return;
-    }
-    document.addEventListener('mousemove', function (e) {
-      dot.style.left = e.clientX + 'px';
-      dot.style.top = e.clientY + 'px';
-    });
-    document.querySelectorAll('.js-magnetic, .js-tilt-card').forEach(function (el) {
-      el.addEventListener('mouseenter', function () {
-        dot.style.width = '38px'; dot.style.height = '38px'; dot.style.background = 'rgba(184,134,91,0.35)';
-      });
-      el.addEventListener('mouseleave', function () {
-        dot.style.width = '14px'; dot.style.height = '14px'; dot.style.background = '#B8865B';
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    initScroll();
-    initHeroLetters();
-    initCounters();
-    initCurtain();
-    initMagnetic();
-    initTilt();
-    initCursor();
-  });
-})();
-</script>
-
-<script>
-  (function(){
-    var burgerBtn = document.getElementById('burgerBtn');
-    var navLinks = document.getElementById('mainNav');
-    if(!burgerBtn || !navLinks) return;
-    burgerBtn.addEventListener('click', function(){
-      var isOpen = navLinks.classList.toggle('open');
-      burgerBtn.classList.toggle('open', isOpen);
-      burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-    navLinks.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click', function(){
-        navLinks.classList.remove('open');
-        burgerBtn.classList.remove('open');
-        burgerBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-</script>
-
+  @media (max-width: 780px) { #nuvora-sticky-cta-bar { display: flex; } }
+  </style>
+  <div id="nuvora-sticky-cta-bar">
+    <a href="#" aria-disabled="true" title="Démo : réservation non active" class="demo-cta">Réserver<small class="demo-note">Démo : réservation non active</small></a>
+  </div>
   <script>
     document.querySelectorAll('.demo-cta').forEach(function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); });
