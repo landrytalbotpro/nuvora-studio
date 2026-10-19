@@ -383,11 +383,17 @@ body {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 72px;
     max-width: 1000px;
     margin: 48px auto 0;
+}
+
+.team-card {
+    flex: 0 1 260px;
+    max-width: 100%;
 }
 
 .team-card img {
@@ -457,7 +463,6 @@ body {
     }
     .services-grid,
     .avis-grid,
-    .team-grid,
     .galeria-grid {
         grid-template-columns: 1fr;
     }
