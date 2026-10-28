@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nuvorastudio.es/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvorastudio.es/"/>
   </url>
   <url>
     <loc>https://nuvorastudio.es/fr/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nuvorastudio.es/"/>
   </url>
   <url>
     <loc>https://nuvorastudio.es/turismo.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/turismo.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/tourisme.html"/>
   </url>
   <url>
     <loc>https://nuvorastudio.es/fr/tourisme.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://nuvorastudio.es/turismo.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nuvorastudio.es/fr/tourisme.html"/>
   </url>
   <url>
     <loc>https://nuvorastudio.es/diseno-web-gijon.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
 </urlset>
