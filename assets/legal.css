@@ -1,0 +1,10 @@
+/* Nuvora Studio — couleurs partagées des pages légales, de la 404 et des remerciements.
+   Les valeurs viennent de brand.css ; les valeurs de secours (à droite) s'appliquent
+   si brand.css ne se charge pas. La mise en page et la police restent dans chaque page. */
+body{background:var(--bg,#EEE8DA);color:var(--ink,#000000)}
+.doc h2{color:var(--indigo-text,#4F46E5)}
+a.btn{background:var(--cta,#5A50F0);color:var(--on-cta,#FFFFFF)}
+a.btn:hover{background:var(--blue,#2F6BFF);color:var(--on-blue,#FFFFFF)}
+a.btn.ghost{background:transparent;color:var(--ink,#000000);border:1px solid var(--cta,#5A50F0)}
+a.btn.ghost:hover{background:var(--cta,#5A50F0);color:var(--on-cta,#FFFFFF)}
+a:focus-visible{outline:3px solid var(--focus,#6C63FF);outline-offset:3px}

@@ -1,0 +1,51 @@
+/* Nuvora Studio — couleurs de marque (source unique).
+   Charté par les pages principales. Chaque page contient aussi un bloc de secours
+   (valeurs claires, identiques à celles-ci) au cas où ce fichier ne se charge pas.
+   Les palettes des projets fictifs du portfolio (Next Level Player, Corte & Co.,
+   Hairline, Salitre) et celle de la page Tourisme restent dans leurs propres fichiers. */
+:root{
+  /* Fonds et textes */
+  --bg:#EEE8DA;            /* fond principal */
+  --paper:#FAF7F0;         /* fond des cartes */
+  --ink:#000000;           /* texte principal et logo */
+  --muted:#5E5A52;         /* texte secondaire */
+
+  /* Violet signature */
+  --accent:#6C63FF;        /* grands éléments, accents décoratifs, traits */
+  --accent-on-ink:#8F88FF; /* violet sur fond noir (carte vedette) */
+  --accent-solid:#5A50F0;  /* fond d'une pastille pleine */
+  --on-accent-solid:#FFFFFF;
+  --focus:#6C63FF;         /* contour de focus */
+
+  /* Boutons principaux */
+  --cta:#5A50F0;
+  --on-cta:#FFFFFF;
+
+  /* Bleu secondaire (survol, traits) */
+  --blue:#2F6BFF;
+  --on-blue:#FFFFFF;
+
+  /* Texte accentué de petite taille (contraste ≥ 4,5 sur le fond) */
+  --indigo-text:#4F46E5;
+
+  /* Texte accentué sur la carte vedette (noire en clair, crème en sombre) */
+  --on-star-text:#8F88FF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397;
+    --accent:#8F88FF; --accent-on-ink:#6C63FF; --accent-solid:#8F88FF; --on-accent-solid:#000000; --focus:#8F88FF;
+    --cta:#5A50F0; --on-cta:#FFFFFF;
+    --blue:#5B8CFF; --on-blue:#000000;
+    --indigo-text:#8F88FF; --on-star-text:#4F46E5;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#000000; --paper:#141414; --ink:#EEE8DA; --muted:#A9A397;
+  --accent:#8F88FF; --accent-on-ink:#6C63FF; --accent-solid:#8F88FF; --on-accent-solid:#000000; --focus:#8F88FF;
+  --cta:#5A50F0; --on-cta:#FFFFFF;
+  --blue:#5B8CFF; --on-blue:#000000;
+  --indigo-text:#8F88FF; --on-star-text:#4F46E5;
+  color-scheme:dark;
+}
